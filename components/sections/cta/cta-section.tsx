@@ -3,6 +3,10 @@ import { AnimateIn } from "@/components/ui/animate-in";
 import { SectionLabel } from "@/components/ui/section-label";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
+// SEO-FIX: Import SITE so the email matches SITE.email throughout the page.
+// Previously "hello@tensaiforge.com" was hardcoded here while SITE.email is
+// "tensaiforge@gmail.com" — two different emails = inconsistent NAP signals.
+import { SITE } from "@/lib/constants";
 
 export function CtaSection() {
   return (
@@ -61,7 +65,7 @@ export function CtaSection() {
             Start a Project <ArrowRight size={18} />
           </a>
           <a
-            href={`mailto:hello@tensaiforge.com`}
+            href={`mailto:${SITE.email}`}
             className="btn-ghost inline-flex items-center justify-center gap-2 px-8 py-4 text-base"
           >
             Schedule a Call <ExternalLink size={16} />

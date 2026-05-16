@@ -42,6 +42,7 @@ const TESTIMONIAL_SLIDES = [
 export function TestimonialsSection() {
   return (
     <section
+      id="testimonials"
       aria-labelledby="testimonials-heading"
       className="section-x section-y bg-gradient-to-b from-transparent via-secondary/20 to-transparent"
     >

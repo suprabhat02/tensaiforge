@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 
@@ -67,9 +68,18 @@ export const Carousel = ({ slides }: { slides: SlideData[] }) => {
           >
             <div className="flex flex-col md:flex-row items-center gap-8 p-6 md:p-10 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
               <div className="flex-shrink-0">
-                <img
+                {/*
+                 * SEO-FIX: Replaced raw <img> with next/image.
+                 * Benefits: automatic AVIF/WebP conversion, built-in lazy
+                 * loading, responsive srcset, and zero CLS (explicit dimensions).
+                 * alt text updated to describe the subject for screen readers.
+                 * images.unsplash.com is already in next.config.ts remotePatterns.
+                 */}
+                <Image
                   src={current.src}
-                  alt={current.author}
+                  alt={`Photo of ${current.author}, ${current.title} at ${current.company}`}
+                  width={112}
+                  height={112}
                   className="w-20 h-20 md:w-28 md:h-28 rounded-full object-cover border-2 border-red-500/30"
                 />
               </div>

@@ -11,9 +11,27 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        // SEO/PERF: All four utility classes now resolve to Space Grotesk as the
+        // primary typeface, preserving the design system. JetBrains Mono is the
+        // explicit fallback for `font-mono` elements only; system stacks are
+        // last-resort for all other classes.
+        //
+        // `sans` is overridden so that any `font-sans` usage (e.g. world-map.tsx)
+        // also resolves to Space Grotesk instead of system UI fonts.
+        // All four classes resolve directly to var(--font-display) = Space Grotesk.
+        // Previously `body` used var(--font-body) which was aliased to
+        // var(--font-display) in :root CSS — but :root never has --font-display set
+        // (next/font sets it on <body> only), so the alias silently failed and fell
+        // through to system fonts. Pointing every class straight at var(--font-display)
+        // eliminates that broken chain entirely.
+        sans: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
         display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
-        body: ["var(--font-body)", ...defaultTheme.fontFamily.sans],
-        mono: ["var(--font-body)", ...defaultTheme.fontFamily.sans],
+        body: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
+        mono: [
+          "var(--font-display)",
+          "var(--font-mono)",
+          ...defaultTheme.fontFamily.mono,
+        ],
       },
       colors: {
         background: "hsl(var(--background))",

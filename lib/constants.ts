@@ -73,7 +73,9 @@ export const SITE = {
   tagline: "Engineering Intelligence",
   description:
     "TENSAIFORGE is an AI-first engineering startup building premium web, mobile, cloud, and automation solutions for forward-thinking companies.",
-  url: "https://tensaiforge.com",
+  // SEO-FIX: Corrected from tensaiforge.com → actual deployed domain.
+  // Update this whenever a custom domain is configured.
+  url: "https://tensaiforge.vercel.app",
   email: "tensaiforge@gmail.com",
   phone: ["+91-7892008290", "+91-8799756909"],
 } as const;

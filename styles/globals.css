@@ -26,6 +26,8 @@
     --neon-crimson: #b30000;
     --section-px: clamp(1rem, 5vw, 6rem);
     --section-py: clamp(4rem, 10vw, 8rem);
+    /* --font-body alias removed: tailwind.config.ts now points font-body
+       directly at var(--font-display), so no CSS variable chain is needed. */
   }
 
   .light {

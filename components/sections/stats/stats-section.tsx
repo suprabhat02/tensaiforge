@@ -5,9 +5,15 @@ import { STATS } from "@/lib/constants";
 export function StatsSection() {
   return (
     <section
-      aria-label="Key statistics"
+      aria-labelledby="stats-heading"
       className="section-x relative overflow-hidden border-y border-border/30 py-24"
     >
+      {/* SEO-FIX: sr-only H2 creates an explicit section heading in the document
+           outline without changing the visible layout. Replaces aria-label="Key
+           statistics" with the semantically stronger aria-labelledby pattern. */}
+      <h2 id="stats-heading" className="sr-only">
+        Key Statistics
+      </h2>
       {/* Gradient background */}
       <div
         className="absolute inset-0 bg-gradient-to-r from-red-500/5 via-background to-orange-500/5"

@@ -19,7 +19,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      aria-label="Hero"
+      aria-labelledby="hero-heading"
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-background"
     >
       {/* Dotted glow background */}
@@ -81,7 +81,10 @@ export function HeroSection() {
         </motion.div>
 
         {/* H1 */}
+        {/* SEO-FIX: Added id="hero-heading" so aria-labelledby on the <section>
+             creates a machine-readable section identity for crawlers and AT. */}
         <motion.h1
+          id="hero-heading"
           initial="hidden"
           animate="visible"
           variants={FADE_UP}
