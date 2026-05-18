@@ -15,7 +15,9 @@ import "@/styles/globals.css";
 // --font-body is aliased to var(--font-display) in styles/globals.css.
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  // Weight 300 (light) is unused across the entire codebase — removed to
+  // eliminate one font file download and shave ~15 KB from FCP critical path.
+  weight: ["400", "500", "600", "700"],
   variable: "--font-display",
   display: "swap",
 });

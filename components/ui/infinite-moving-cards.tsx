@@ -78,6 +78,8 @@ export function InfiniteMovingCards({
                 alt=""
                 width={22}
                 height={22}
+                loading="lazy"
+                decoding="async"
                 className="h-[22px] w-[22px] shrink-0 object-contain"
                 aria-hidden="true"
               />
@@ -111,6 +113,8 @@ export function InfiniteMovingCards({
                 alt=""
                 width={22}
                 height={22}
+                loading="lazy"
+                decoding="async"
                 className="h-[22px] w-[22px] shrink-0 object-contain"
                 aria-hidden="true"
               />

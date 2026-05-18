@@ -1,5 +1,6 @@
-import { Mail, Phone, Zap } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import { TensaiForgeLogo } from "@/components/ui/tensaiforge-logo";
 
 export function FooterSection() {
   return (
@@ -16,12 +17,7 @@ export function FooterSection() {
           {/* Brand */}
           <div className="max-w-sm">
             <div className="inline-flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-red-500 to-orange-500">
-                <Zap className="h-4 w-4 text-black" />
-              </div>
-              <span className="font-display text-lg font-bold tracking-tight">
-                TENSAI<span className="text-gradient-forge">FORGE</span>
-              </span>
+              <TensaiForgeLogo className="h-10 w-auto" />
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Engineering intelligent systems for companies that refuse to be

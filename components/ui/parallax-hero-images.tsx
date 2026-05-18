@@ -180,6 +180,7 @@ const ParallaxImage = memo(function ParallaxImage({
         alt=""
         loading="lazy"
         decoding="async"
+        fetchPriority="low"
         className={cn(
           "aspect-4/3 h-20 w-32 rounded-lg object-cover shadow-sm ring-1 ring-white/10 sm:h-40 sm:w-56 md:h-52 md:w-80",
           imageClassName,

@@ -113,13 +113,13 @@ export function ProjectsSection() {
                       ))}
                     </div>
 
-                    <a
+                    {/* <a
                       href={project.href}
                       className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-red-400 transition-colors hover:text-red-300"
                       aria-label={`View ${project.title} case study`}
                     >
                       View Case Study <ArrowRight size={14} />
-                    </a>
+                    </a> */}
                   </div>
                 </article>
               </Card3D>

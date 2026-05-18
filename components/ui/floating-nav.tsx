@@ -3,10 +3,11 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Zap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/constants";
 import { FADE_UP, SPRING_GENTLE } from "@/lib/animations";
 import { cn } from "@/lib/utils";
+import { TensaiForgeLogo } from "./tensaiforge-logo";
 
 export function FloatingNav() {
   const [visible, setVisible] = useState(true);
@@ -59,12 +60,7 @@ export function FloatingNav() {
           >
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-red-500 to-orange-500">
-                <Zap className="h-4 w-4 text-black" />
-              </div>
-              <span className="text-lg font-display font-bold">
-                TENSAI<span className="text-gradient-cyan">FORGE</span>
-              </span>
+              <TensaiForgeLogo className="h-8 w-auto" />
             </Link>
 
             {/* Desktop nav links */}
@@ -123,12 +119,7 @@ export function FloatingNav() {
                 className="flex items-center gap-2"
                 onClick={() => setMobileOpen(false)}
               >
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-red-500 to-orange-500">
-                  <Zap className="h-4 w-4 text-black" />
-                </div>
-                <span className="text-lg font-display font-bold">
-                  TENSAI<span className="text-gradient-cyan">FORGE</span>
-                </span>
+                <TensaiForgeLogo className="h-8 w-auto" />
               </Link>
               <button
                 type="button"

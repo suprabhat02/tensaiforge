@@ -74,7 +74,13 @@ export function generateOrganizationSchema() {
     name: SITE.name,
     description: SITE.description,
     url: SITE.url,
-    logo: `${SITE.url}/icon`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/tensaiforgelogo.svg`,
+      width: 201,
+      height: 123,
+    },
+    image: `${SITE.url}/tensaiforgelogo.svg`,
     email: SITE.email,
     // SEO-FIX: Kept sameAs array but links must resolve to real profiles.
     // Replace placeholder slugs with verified URLs or remove entries that 404.
