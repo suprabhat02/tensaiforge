@@ -50,6 +50,7 @@ export default function RootLayout({
        * for the first resource fetched from each host, directly improving LCP.
        */}
       <head>
+        <link rel="icon" href="/tensaiforgelogo.ico" sizes="32x32" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link
           rel="preconnect"

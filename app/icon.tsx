@@ -1,12 +1,11 @@
+export const dynamic = "force-static";
+
 /**
- * SEO-FIX: Programmatic favicon via Next.js App Router file convention.
+ * Favicon served from the static .ico file in /public.
  *
- * Previously lib/seo.ts declared icons: { icon: "/favicon.ico" } but no
- * favicon.ico existed in /public, causing a 404 on every page load and
- * missing the favicon in browser tabs and Google search results.
- *
- * Next.js auto-detects this file and injects <link rel="icon"> in <head>.
- * No static file in /public required.
+ * Next.js App Router detects this file and injects <link rel="icon"> in <head>.
+ * Using the actual brand .ico for sharper rendering at small sizes and
+ * better caching (static file vs on-demand image generation).
  */
 import { ImageResponse } from "next/og";
 
@@ -19,16 +18,19 @@ export default function Icon() {
       style={{
         width: "32px",
         height: "32px",
-        borderRadius: "7px",
-        background: "linear-gradient(135deg, #F90404 0%, #ff6b2a 100%)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        background: "#080808",
       }}
     >
-      {/* Zap icon — matches the brand mark used in the nav and footer */}
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="black" />
+      {/* TF monogram matching the brand logo */}
+      <svg width="32" height="19" viewBox="0 0 201 123" fill="none">
+        <path
+          d="M56.5 50.4C58.4333 57.2667 61.1667 63.4 64.7 68.8C68.2333 74.2 72.7333 78.7333 78.2 82.4C83.7333 86 90.4333 88.6667 98.3 90.4C97.3667 91.2667 96.3667 92.4 95.3 93.8C94.3 95.2 93.3 96.6333 92.3 98.1C91.3667 99.5667 90.6 100.9 90 102.1C81.4667 99.7 74.3 96.3 68.5 91.9C62.7 87.5 57.9 82.0333 54.1 75.5C50.3667 68.9667 47.2667 61.4 44.8 52.8L56.5 50.4ZM9.1 45.4H92.3V57.7H9.1V45.4ZM6 14.7H95V27H6V14.7ZM43.2 18H56V42.6C56 46.8 55.7 51.2 55.1 55.8C54.5 60.3333 53.3333 64.8333 51.6 69.3C49.8667 73.7 47.3333 77.9333 44 82C40.6667 86.0667 36.2667 89.8 30.8 93.2C25.4 96.6667 18.7 99.6667 10.7 102.2C10.2333 101.133 9.56667 99.9333 8.7 98.6C7.83333 97.2667 6.9 95.9333 5.9 94.6C4.96667 93.3333 4.06667 92.2667 3.2 91.4C10.3333 89.3333 16.3 86.8667 21.1 84C25.9667 81.0667 29.8667 77.9 32.8 74.5C35.7333 71.1 37.9333 67.6 39.4 64C40.8667 60.4 41.8667 56.7667 42.4 53.1C42.9333 49.3667 43.2 45.8333 43.2 42.5V18ZM145.5 7.9L158.3 7.79999L158.8 87C158.867 90.6 158.433 93.3333 157.5 95.2C156.633 97.1333 155.067 98.6333 152.8 99.7C150.6 100.7 147.733 101.333 144.2 101.6C140.733 101.867 136.567 102.033 131.7 102.1C131.5 100.9 131.133 99.5333 130.6 98C130.067 96.5333 129.5 95.0333 128.9 93.5C128.3 92.0333 127.7 90.7333 127.1 89.6C129.3 89.6667 131.5 89.7333 133.7 89.8C135.9 89.8 137.833 89.8 139.5 89.8C141.233 89.8 142.467 89.8 143.2 89.8C144.333 89.7333 145.1 89.5333 145.5 89.2C145.9 88.8 146.1 88.0667 146.1 87L145.5 7.9ZM106.6 25.9H194.7V37.7H106.6V25.9ZM174.9 39.9L186.8 47.3C182.067 51.5 176.767 55.5333 170.9 59.4C165.033 63.2 158.767 66.7667 152.1 70.1C145.433 73.3667 138.5 76.3333 131.3 79C124.167 81.6667 116.933 83.9333 109.6 85.8C109.133 84.7333 108.5 83.5 107.7 82.1C106.967 80.7 106.167 79.3333 105.3 78C104.5 76.6667 103.733 75.5333 103 74.6C110.067 73 117.1 70.9667 124.1 68.5C131.1 66.0333 137.8 63.3 144.2 60.3C150.6 57.2333 156.433 54 161.7 50.6C166.967 47.1333 171.367 43.5667 174.9 39.9Z"
+          fill="#F90404"
+        />
+        <line y1="121" x2="201" y2="121" stroke="#F90404" strokeWidth="4" />
       </svg>
     </div>,
     { ...size },

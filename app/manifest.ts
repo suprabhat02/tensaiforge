@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 /**
  * SEO-FIX: Web App Manifest via Next.js App Router route convention.
  *

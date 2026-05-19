@@ -89,6 +89,18 @@ export function generateOrganizationSchema() {
       "https://github.com/tensaiforge",
       "https://linkedin.com/company/tensaiforge",
     ],
+    founders: [
+      {
+        "@type": "Person",
+        name: "Suprabhat",
+        jobTitle: "Co-Founder & CEO",
+      },
+      {
+        "@type": "Person",
+        name: "Sandeep",
+        jobTitle: "Co-Founder & CTO",
+      },
+    ],
     offers: SERVICES.map((service) => ({
       "@type": "Offer",
       name: service.title,

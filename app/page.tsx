@@ -38,6 +38,11 @@ const GlobalReachSection = dynamic(() =>
     default: m.GlobalReachSection,
   })),
 );
+const FoundersSection = dynamic(() =>
+  import("@/components/sections/founders/founders-section").then((m) => ({
+    default: m.FoundersSection,
+  })),
+);
 const ContactSection = dynamic(() =>
   import("@/components/sections/contact/contact-section").then((m) => ({
     default: m.ContactSection,
@@ -68,6 +73,7 @@ export default function Home() {
         <TestimonialsSection />
         <WhyUsSection />
         <GlobalReachSection />
+        {/* <FoundersSection /> */}
         <CtaSection />
         <ContactSection />
       </main>

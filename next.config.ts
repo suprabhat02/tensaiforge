@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   reactStrictMode: true,
   // Gzip-compress all server responses (HTML, JSON, JS chunks).
   compress: true,
@@ -8,6 +9,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    unoptimized: true,
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
     // Cache optimized images for 30 days instead of the default 60 seconds.
     // Prevents redundant re-processing of the same Unsplash images on repeat

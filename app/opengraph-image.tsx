@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 /**
  * SEO-FIX: Programmatic Open Graph image via Next.js App Router file convention.
  *

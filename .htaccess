@@ -1,0 +1,80 @@
+# ─── FORCE HTTPS ───────────────────────────────────────────────
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ─── REMOVE www (pick one: www or non-www) ─────────────────────
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# ─── SECURITY HEADERS ─────────────────────────────────────────
+<IfModule mod_headers.c>
+  # Prevent MIME type sniffing
+  Header set X-Content-Type-Options "nosniff"
+  # XSS Protection
+  Header set X-XSS-Protection "1; mode=block"
+  # Clickjacking protection
+  Header set X-Frame-Options "SAMEORIGIN"
+  # Referrer policy
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # Permissions Policy
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # Content Security Policy (adjust if needed)
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://api.emailjs.com; frame-ancestors 'self';"
+  # Strict Transport Security (1 year)
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  # Remove server signature
+  Header unset Server
+  Header unset X-Powered-By
+</IfModule>
+
+# ─── GZIP / BROTLI COMPRESSION ────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css
+  AddOutputFilterByType DEFLATE text/javascript application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml text/xml
+  AddOutputFilterByType DEFLATE application/font-woff2 font/woff2
+</IfModule>
+
+# ─── BROWSER CACHING ──────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # HTML - short cache (for updates)
+  ExpiresByType text/html "access plus 1 hour"
+  # CSS & JS (Next.js hashes filenames, so long cache is safe)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  # Images
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  # Fonts
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  # JSON/XML
+  ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 hour"
+</IfModule>
+
+# ─── PREVENT DIRECTORY LISTING ─────────────────────────────────
+Options -Indexes
+
+# ─── BLOCK SENSITIVE FILES ─────────────────────────────────────
+<FilesMatch "\.(env|git|gitignore|md|lock|log)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# ─── NEXT.JS STATIC EXPORT ROUTING ────────────────────────────
+# Handle clean URLs (trailing slash removal)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Custom 404
+ErrorDocument 404 /404.html
