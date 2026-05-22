@@ -115,15 +115,8 @@ export function generateWebsiteSchema() {
     "@type": "WebSite",
     name: SITE.name,
     url: SITE.url,
-    // SEO-FIX: Added potentialAction — enables Google Sitelinks Searchbox eligibility
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SITE.url}/?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
+    // SearchAction removed — no on-site search exists; invalid markup
+    // triggers GSC warnings and can hurt trust signals.
   } as const;
 }
 
@@ -149,5 +142,95 @@ export function generateServiceListSchema() {
         },
       },
     })),
+  } as const;
+}
+
+// ── FAQ Schema — unlocks rich-result FAQ snippets in SERPs ────────────────────
+export function generateFAQSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What services does TENSAIFORGE offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "TENSAIFORGE offers website development, web app development, mobile app development, cloud & backend solutions, and AI chatbot & assistant development. We specialize in Next.js, React, TypeScript, and AI-first engineering.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does a typical project take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Project timelines vary based on complexity. A marketing website typically takes 2-4 weeks, a web application 6-12 weeks, and enterprise-scale platforms 3-6 months. We follow an agile process with weekly demos so you see progress continuously.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What technologies does TENSAIFORGE use?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our core stack includes Next.js, React, TypeScript, Node.js, PostgreSQL, Redis, Docker, Kubernetes, and cloud platforms (AWS, GCP). For AI, we integrate OpenAI, Claude, LangChain, and custom fine-tuned models.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does TENSAIFORGE work with startups or enterprises?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Both. We build MVPs for early-stage startups and scale enterprise systems handling millions of users. Our architecture is designed to grow from seed stage to IPO-ready without re-architecting.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How can I get a quote from TENSAIFORGE?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can reach us at tensaiforge@gmail.com or call +91-7892008290. We respond to all inquiries within 24 hours. Fill out our contact form with project details for a faster estimate.",
+        },
+      },
+    ],
+  } as const;
+}
+
+// ── ProfessionalService Schema — enables Knowledge Panel for branded searches ─
+export function generateProfessionalServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: SITE.name,
+    description: SITE.description,
+    url: SITE.url,
+    logo: `${SITE.url}/tensaiforgelogo.svg`,
+    image: `${SITE.url}/tensaiforgelogo.svg`,
+    email: SITE.email,
+    telephone: SITE.phone[0],
+    priceRange: "$$",
+    areaServed: {
+      "@type": "Place",
+      name: "Worldwide",
+    },
+    serviceType: [
+      "Web Development",
+      "Mobile App Development",
+      "AI Development",
+      "Cloud Solutions",
+      "SaaS Development",
+    ],
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "AI Engineering",
+      "Cloud Architecture",
+    ],
+    sameAs: [
+      "https://twitter.com/tensaiforge",
+      "https://github.com/tensaiforge",
+      "https://linkedin.com/company/tensaiforge",
+    ],
   } as const;
 }

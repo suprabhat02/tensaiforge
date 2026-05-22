@@ -7,12 +7,12 @@ import { ParallaxHeroImages } from "@/components/ui/parallax-hero-images";
 import { FADE_UP, FADE_DOWN, EASE_OUT_EXPO } from "@/lib/animations";
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80",
-  "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&q=80",
-  "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80",
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80",
-  "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&q=80",
-  "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&q=80",
+  "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&q=40",
+  "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=300&q=40",
+  "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=300&q=40",
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&q=40",
+  "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=300&q=40",
+  "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=300&q=40",
 ];
 
 export function HeroSection() {

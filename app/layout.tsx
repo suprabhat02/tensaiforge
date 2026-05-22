@@ -6,6 +6,8 @@ import {
   generateOrganizationSchema,
   generateWebsiteSchema,
   generateServiceListSchema,
+  generateFAQSchema,
+  generateProfessionalServiceSchema,
 } from "@/lib/seo";
 import "@/styles/globals.css";
 
@@ -52,11 +54,13 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/tensaiforgelogo.ico" sizes="32x32" />
         <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link
           rel="preconnect"
           href="https://cdn.jsdelivr.net"
           crossOrigin="anonymous"
         />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -74,6 +78,20 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateServiceListSchema()),
+          }}
+        />
+        {/* FAQ schema — unlocks expandable FAQ rich snippets in SERPs */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema()),
+          }}
+        />
+        {/* ProfessionalService schema — enables Knowledge Panel */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProfessionalServiceSchema()),
           }}
         />
       </head>

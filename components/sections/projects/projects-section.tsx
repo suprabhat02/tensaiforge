@@ -8,11 +8,11 @@ import { FADE_UP } from "@/lib/animations";
 
 const PROJECT_IMAGES: Record<string, string> = {
   "nexus-ai":
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=60",
   "fleet-ops":
-    "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80",
+    "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=60",
   "synapse-bank":
-    "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&q=80",
+    "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&q=60",
 };
 
 export function ProjectsSection() {
@@ -38,7 +38,7 @@ export function ProjectsSection() {
             Products That <span className="text-gradient-forge">Perform</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            From AI platforms to core banking systems — we build what others
+            From AI platforms to core banking systems â€” we build what others
             consider impossible.
           </p>
         </AnimateIn>

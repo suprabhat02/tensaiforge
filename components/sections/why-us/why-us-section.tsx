@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { Zap, Gauge, Layers, Code2, Shield, Eye } from "@/lib/animated-icons";
@@ -23,7 +23,7 @@ const FEATURES: FeatureItem[] = [
     description:
       "Every system we build has AI integration baked in from day one — LLMs, embeddings, and agents as core infrastructure, not afterthoughts.",
     image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&q=80",
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&q=60",
     className: "sm:col-span-2 lg:col-span-2",
   },
   {
@@ -49,7 +49,7 @@ const FEATURES: FeatureItem[] = [
     description:
       "OWASP Top 10 hardening, zero-trust architecture, automated vulnerability scanning — security is a feature, not a checklist.",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=900&q=80",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=900&q=60",
     className: "sm:col-span-2 lg:col-span-2",
   },
   {
@@ -67,7 +67,7 @@ const FEATURES: FeatureItem[] = [
     description:
       "Daily standups, weekly demos, real-time progress tracking. You always know exactly what's happening and why.",
     image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=60",
     className: "sm:col-span-2 lg:col-span-2",
   },
 ];

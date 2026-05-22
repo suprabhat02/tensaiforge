@@ -47,14 +47,14 @@ const TIMELINE_DATA = [
         </ul>
         <div className="grid grid-cols-2 gap-4">
           <Image
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80"
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=60"
             alt="AI Discovery Phase"
             width={500}
             height={500}
             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
           />
           <Image
-            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80"
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=60"
             alt="Research & Planning"
             width={500}
             height={500}
@@ -104,14 +104,14 @@ const TIMELINE_DATA = [
         </ul>
         <div className="grid grid-cols-2 gap-4">
           <Image
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=60"
             alt="Cloud Architecture"
             width={500}
             height={500}
             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
           />
           <Image
-            src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80"
+            src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=60"
             alt="System Design"
             width={500}
             height={500}
@@ -161,14 +161,14 @@ const TIMELINE_DATA = [
         </ul>
         <div className="grid grid-cols-2 gap-4">
           <Image
-            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80"
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=60"
             alt="AI Development"
             width={500}
             height={500}
             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
           />
           <Image
-            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80"
+            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=60"
             alt="Code & Deploy"
             width={500}
             height={500}
@@ -183,7 +183,7 @@ const TIMELINE_DATA = [
     content: (
       <div>
         <p className="mb-6 text-sm leading-relaxed text-neutral-300 md:text-base">
-          Post-launch, AI monitors your systems 24/7 — predicting failures
+          Post-launch, AI monitors your systems 24/7 â€” predicting failures
           before they happen and auto-scaling to meet demand.
         </p>
         <ul className="mb-8 space-y-3">
@@ -218,14 +218,14 @@ const TIMELINE_DATA = [
         </ul>
         <div className="grid grid-cols-2 gap-4">
           <Image
-            src="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&q=80"
+            src="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&q=60"
             alt="AI Monitoring"
             width={500}
             height={500}
             className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
           />
           <Image
-            src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&q=80"
+            src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&q=60"
             alt="Scale & Growth"
             width={500}
             height={500}

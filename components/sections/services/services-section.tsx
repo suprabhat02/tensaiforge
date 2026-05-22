@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { Globe, Layers, Smartphone, Cloud, Bot } from "@/lib/animated-icons";
@@ -15,7 +15,7 @@ const SERVICES = [
       "Blazing-fast, conversion-optimized websites built with Next.js, TypeScript & Tailwind CSS. Core Web Vitals in the top 5%.",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     image:
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=60",
     className: "sm:col-span-2 lg:col-span-2",
   },
   {
@@ -26,7 +26,7 @@ const SERVICES = [
       "Complex SaaS platforms and enterprise apps engineered for millions of users. From MVP to IPO-ready.",
     tags: ["React", "Node.js", "PostgreSQL"],
     image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=60",
     className: "lg:col-span-1",
   },
   {
@@ -37,7 +37,7 @@ const SERVICES = [
       "Cross-platform apps with native performance. One codebase, every device, zero compromise.",
     tags: ["React Native", "Expo", "iOS/Android"],
     image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=60",
     className: "lg:col-span-1",
   },
   {
@@ -48,7 +48,7 @@ const SERVICES = [
       "Serverless architectures, microservices, and cloud-native infrastructure that scales infinitely.",
     tags: ["AWS", "GCP", "Kubernetes"],
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=60",
     className: "lg:col-span-1",
   },
   {
@@ -59,7 +59,7 @@ const SERVICES = [
       "Production-grade AI integrations with GPT-4, Claude, and custom fine-tuned models embedded into your product.",
     tags: ["OpenAI", "LangChain", "RAG"],
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=60",
     className: "lg:col-span-1",
   },
 ];

@@ -7,12 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: SITE.url,
-      // SEO-FIX: Replaced new Date() with a static ISO string.
-      // Dynamic dates cause every build to mark the page as "just modified",
-      // wasting crawl budget on unchanged pages. Update this date manually
-      // only when meaningful content changes are published.
-      lastModified: new Date("2025-01-15"),
-      changeFrequency: "monthly",
+      // SEO-FIX: Update this date whenever meaningful content changes ship.
+      lastModified: new Date("2026-05-22"),
+      changeFrequency: "weekly",
       priority: 1,
     },
     // SEO-FIX: Removed /#services and /#projects fragment entries.
