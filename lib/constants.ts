@@ -463,9 +463,10 @@ export const BENTO_FEATURES: readonly BentoFeature[] = [
 // ── Navigation ───────────────────────────────────────────────
 
 export const NAV_ITEMS: readonly NavItem[] = [
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
   { label: "Process", href: "#process" },
+  { label: "Projects", href: "#projects" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Why Us", href: "#why-us" },
+  { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ] as const;

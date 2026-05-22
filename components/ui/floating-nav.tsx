@@ -2,27 +2,55 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "@/lib/animated-icons";
+import { ChevronDown } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/constants";
+import { SERVICE_PAGES } from "@/lib/service-pages";
 import { FADE_UP } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 import { TensaiForgeLogo } from "./tensaiforge-logo";
 
+// Service items for the dropdown
+const SERVICE_NAV = SERVICE_PAGES.map((s) => ({
+  label: s.title,
+  href: `/services/${s.slug}/`,
+}));
+
 export function FloatingNav() {
+  const pathname = usePathname();
+  const isHome = pathname === "/" || pathname === "";
+  const isServicePage = pathname.startsWith("/services/");
+
+  // Extract current service slug for active detection
+  const currentServiceSlug = isServicePage
+    ? pathname.replace("/services/", "").replace(/\/$/, "")
+    : null;
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeHref, setActiveHref] = useState(NAV_ITEMS[0]?.href ?? "");
+  const [activeSection, setActiveSection] = useState<string>("");
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const servicesTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const servicesButtonRef = useRef<HTMLDivElement>(null);
+  const [dropdownAlign, setDropdownAlign] = useState<
+    "center" | "left" | "right"
+  >("center");
 
-  // Use refs for scroll tracking to avoid re-renders on every scroll tick
+  // Always produce absolute hash paths (e.g. "/#contact") so Next.js Link
+  // never appends a hash to an already-hashed URL.
+  const resolveHref = (href: string) =>
+    href.startsWith("#") ? `/${href}` : href;
+
+  // ── Scroll tracking ─────────────────────────────────────────
   const ticking = useRef(false);
   const intersectionRatiosRef = useRef<Record<string, number>>({});
 
   const updateScrollState = useCallback(() => {
-    const currentY = window.scrollY;
-    const isScrolled = currentY > 20;
-
-    setScrolled(isScrolled);
+    setScrolled(globalThis.scrollY > 20);
     ticking.current = false;
   }, []);
 
@@ -33,9 +61,8 @@ export function FloatingNav() {
         requestAnimationFrame(updateScrollState);
       }
     }
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    globalThis.addEventListener("scroll", onScroll, { passive: true });
+    return () => globalThis.removeEventListener("scroll", onScroll);
   }, [updateScrollState]);
 
   useEffect(() => {
@@ -45,12 +72,20 @@ export function FloatingNav() {
     };
   }, [mobileOpen]);
 
+  // ── Smart section detection via IntersectionObserver ──────────
   useEffect(() => {
-    const sectionIds = NAV_ITEMS.map((item) =>
-      item.href.replace("#", ""),
-    ).filter(Boolean);
-
-    if (sectionIds.length === 0) return;
+    // On homepage, observe all sections matching NAV_ITEMS
+    // On service pages, observe service page sections + contact
+    const sectionIds = isHome
+      ? NAV_ITEMS.map((item) => item.href.replace("#", "")).filter(Boolean)
+      : [
+          "service-hero",
+          "deliverables",
+          "features",
+          "tech-stack",
+          "faq",
+          "contact",
+        ];
 
     const sections = sectionIds
       .map((id) => document.getElementById(id))
@@ -58,11 +93,11 @@ export function FloatingNav() {
 
     if (sections.length === 0) return;
 
-    // Sync initial state with URL hash when opening deep links.
-    if (window.location.hash) {
-      const hash = window.location.hash;
-      if (NAV_ITEMS.some((item) => item.href === hash)) {
-        setActiveHref(hash);
+    // Sync with URL hash on deep links
+    if (isHome && globalThis.location.hash) {
+      const hash = globalThis.location.hash.replace("#", "");
+      if (sectionIds.includes(hash)) {
+        setActiveSection(hash);
       }
     }
 
@@ -80,9 +115,7 @@ export function FloatingNav() {
         })[0];
 
       if (!candidate) return;
-
-      const nextHref = `#${candidate.id}`;
-      setActiveHref((prev) => (prev === nextHref ? prev : nextHref));
+      setActiveSection((prev) => (prev === candidate.id ? prev : candidate.id));
     };
 
     const observer = new IntersectionObserver(
@@ -96,7 +129,6 @@ export function FloatingNav() {
         updateActiveSection();
       },
       {
-        // Bias toward the center viewport area to avoid jumpy changes at edges.
         rootMargin: "-18% 0px -45% 0px",
         threshold: [0, 0.15, 0.3, 0.5, 0.75, 1],
       },
@@ -111,7 +143,60 @@ export function FloatingNav() {
       observer.disconnect();
       intersectionRatiosRef.current = {};
     };
-  }, []);
+  }, [isHome]);
+
+  // ── Smart active detection helpers ──────────────────────────
+  const isNavActive = (item: { label: string; href: string }) => {
+    const sectionId = item.href.replace("#", "");
+
+    if (item.label === "Services") {
+      // On service pages: Services is active unless contact section is in view
+      if (isServicePage && activeSection !== "contact") return true;
+      // On homepage: active when services section is in view
+      if (isHome && activeSection === sectionId) return true;
+      return false;
+    }
+
+    if (item.label === "Contact") {
+      // Contact active on ANY page when contact section is in view
+      if (activeSection === "contact") return true;
+      return false;
+    }
+
+    // Standard section items: only on homepage
+    if (isHome && activeSection === sectionId) return true;
+    return false;
+  };
+
+  // Is a specific service dropdown link active?
+  const isServiceLinkActive = (href: string) => {
+    if (!currentServiceSlug) return false;
+    return href.includes(currentServiceSlug);
+  };
+
+  // ── Dropdown auto-alignment ──────────────────────────────────
+  useEffect(() => {
+    if (!servicesOpen || !servicesButtonRef.current) return;
+
+    const rect = servicesButtonRef.current.getBoundingClientRect();
+    const viewportWidth = globalThis.innerWidth;
+    const dropdownWidth = 280;
+
+    const centerLeft = rect.left + rect.width / 2 - dropdownWidth / 2;
+    const centerRight = centerLeft + dropdownWidth;
+
+    if (centerLeft < 16) {
+      setDropdownAlign("left");
+    } else if (centerRight > viewportWidth - 16) {
+      setDropdownAlign("right");
+    } else {
+      setDropdownAlign("center");
+    }
+  }, [servicesOpen]);
+
+  let dropdownPositionClass = "left-1/2 -translate-x-1/2";
+  if (dropdownAlign === "left") dropdownPositionClass = "left-0";
+  else if (dropdownAlign === "right") dropdownPositionClass = "right-0";
 
   return (
     <>
@@ -128,42 +213,134 @@ export function FloatingNav() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 focus:outline-none focus:ring-1 focus:ring-red-400 rounded-lg"
+            className="flex items-center gap-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-red-400"
           >
             <TensaiForgeLogo className="h-7 w-auto" />
           </Link>
 
           {/* Desktop nav links */}
           <div className="hidden items-center gap-0.5 md:flex">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setActiveHref(item.href)}
-                aria-current={activeHref === item.href ? "page" : undefined}
-                className={cn(
-                  "rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-red-400",
-                  activeHref === item.href
-                    ? "bg-white/[0.12] text-white"
-                    : "text-neutral-300 hover:bg-white/[0.06] hover:text-white",
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              const active = isNavActive(item);
+
+              // Services item gets a dropdown
+              if (item.label === "Services") {
+                return (
+                  <div
+                    key={item.href}
+                    ref={servicesButtonRef}
+                    className="relative"
+                    onMouseEnter={() => {
+                      clearTimeout(servicesTimeout.current);
+                      setServicesOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      servicesTimeout.current = setTimeout(
+                        () => setServicesOpen(false),
+                        150,
+                      );
+                    }}
+                  >
+                    <Link
+                      href={resolveHref(item.href)}
+                      aria-current={active ? "page" : undefined}
+                      aria-expanded={servicesOpen}
+                      className={cn(
+                        "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-red-400",
+                        active
+                          ? "bg-white/[0.12] text-white"
+                          : "text-neutral-300 hover:bg-white/[0.06] hover:text-white",
+                      )}
+                    >
+                      {item.label}
+                      <ChevronDown
+                        size={14}
+                        className={cn(
+                          "transition-transform duration-200",
+                          servicesOpen && "rotate-180",
+                        )}
+                      />
+                    </Link>
+
+                    <AnimatePresence>
+                      {servicesOpen && (
+                        <motion.div
+                          ref={dropdownRef}
+                          initial={{ opacity: 0, y: -4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -4 }}
+                          transition={{ duration: 0.15 }}
+                          className={cn(
+                            "absolute top-full z-50 mt-2 w-[280px] overflow-hidden rounded-xl border border-white/[0.12] bg-neutral-950/90 shadow-2xl backdrop-blur-2xl",
+                            dropdownPositionClass,
+                          )}
+                        >
+                          <div className="p-2">
+                            {SERVICE_NAV.map((service) => {
+                              const serviceActive = isServiceLinkActive(
+                                service.href,
+                              );
+                              return (
+                                <Link
+                                  key={service.href}
+                                  href={service.href}
+                                  className={cn(
+                                    "block rounded-lg px-3 py-2.5 text-sm transition-colors",
+                                    serviceActive
+                                      ? "bg-red-500/10 font-medium text-red-400"
+                                      : "text-neutral-300 hover:bg-white/[0.08] hover:text-white",
+                                  )}
+                                  onClick={() => setServicesOpen(false)}
+                                >
+                                  {service.label}
+                                </Link>
+                              );
+                            })}
+                            <div className="my-1 border-t border-white/[0.08]" />
+                            <Link
+                              href={resolveHref("#services")}
+                              className="block rounded-lg px-3 py-2.5 text-sm font-medium text-red-400 transition-colors hover:bg-red-400/10"
+                              onClick={() => setServicesOpen(false)}
+                            >
+                              View All Services
+                            </Link>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.href}
+                  href={resolveHref(item.href)}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-red-400",
+                    active
+                      ? "bg-white/[0.12] text-white"
+                      : "text-neutral-300 hover:bg-white/[0.06] hover:text-white",
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Desktop CTA + Mobile hamburger */}
           <div className="flex items-center gap-3">
             <Link
-              href="#contact"
+              href={resolveHref("#contact")}
               className="btn-primary hidden text-xs md:inline-flex"
             >
               Get a Quote
             </Link>
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-neutral-300 transition-colors hover:bg-white/[0.06] hover:text-white md:hidden focus:outline-none focus:ring-1 focus:ring-red-400"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-neutral-300 transition-colors hover:bg-white/[0.06] hover:text-white focus:outline-none focus:ring-1 focus:ring-red-400 md:hidden"
               onClick={() => setMobileOpen(true)}
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
@@ -218,29 +395,88 @@ export function FloatingNav() {
                 },
               }}
             >
-              {NAV_ITEMS.map((item) => (
-                <motion.div key={item.href} variants={FADE_UP}>
-                  <Link
-                    href={item.href}
-                    onClick={() => {
-                      setActiveHref(item.href);
-                      setMobileOpen(false);
-                    }}
-                    aria-current={activeHref === item.href ? "page" : undefined}
-                    className={cn(
-                      "text-3xl font-display font-bold transition-colors",
-                      activeHref === item.href
-                        ? "text-red-400"
-                        : "text-white hover:text-red-400",
+              {NAV_ITEMS.map((item) => {
+                const active = isNavActive(item);
+
+                return (
+                  <motion.div key={item.href} variants={FADE_UP}>
+                    {item.label === "Services" ? (
+                      <div className="flex flex-col items-center">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setMobileServicesOpen(!mobileServicesOpen)
+                          }
+                          className={cn(
+                            "inline-flex items-center gap-2 font-display text-3xl font-bold transition-colors",
+                            active
+                              ? "text-red-400"
+                              : "text-white hover:text-red-400",
+                          )}
+                        >
+                          {item.label}
+                          <ChevronDown
+                            size={22}
+                            className={cn(
+                              "transition-transform duration-200",
+                              mobileServicesOpen && "rotate-180",
+                            )}
+                          />
+                        </button>
+                        <AnimatePresence>
+                          {mobileServicesOpen && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="mt-3 flex flex-col items-center gap-2 overflow-hidden"
+                            >
+                              {SERVICE_NAV.map((service) => {
+                                const serviceActive = isServiceLinkActive(
+                                  service.href,
+                                );
+                                return (
+                                  <Link
+                                    key={service.href}
+                                    href={service.href}
+                                    onClick={() => setMobileOpen(false)}
+                                    className={cn(
+                                      "text-lg transition-colors",
+                                      serviceActive
+                                        ? "font-medium text-red-400"
+                                        : "text-neutral-400 hover:text-red-400",
+                                    )}
+                                  >
+                                    {service.label}
+                                  </Link>
+                                );
+                              })}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    ) : (
+                      <Link
+                        href={resolveHref(item.href)}
+                        onClick={() => setMobileOpen(false)}
+                        aria-current={active ? "page" : undefined}
+                        className={cn(
+                          "font-display text-3xl font-bold transition-colors",
+                          active
+                            ? "text-red-400"
+                            : "text-white hover:text-red-400",
+                        )}
+                      >
+                        {item.label}
+                      </Link>
                     )}
-                  >
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
               <motion.div variants={FADE_UP} className="mt-4">
                 <Link
-                  href="#contact"
+                  href={resolveHref("#contact")}
                   onClick={() => setMobileOpen(false)}
                   className="btn-primary text-base"
                 >

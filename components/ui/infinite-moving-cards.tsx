@@ -10,6 +10,11 @@ const SPEED_MAP = {
   fast: "20s",
 } as const;
 
+// Devicon SVGs that ship as black/dark and need inversion on dark backgrounds
+const DARK_ICONS = ["nextjs", "vercel", "prisma"];
+const needsInvert = (src: string) =>
+  DARK_ICONS.some((name) => src.includes(`/${name}/`));
+
 type InfiniteMovingCardsProps = Readonly<{
   items: readonly TechItem[];
   speed?: keyof typeof SPEED_MAP;
@@ -80,7 +85,10 @@ export function InfiniteMovingCards({
                 height={22}
                 loading="lazy"
                 decoding="async"
-                className="h-[22px] w-[22px] shrink-0 object-contain"
+                className={cn(
+                  "h-[22px] w-[22px] shrink-0 object-contain",
+                  needsInvert(item.devicon) && "invert",
+                )}
                 aria-hidden="true"
               />
             )}
@@ -115,7 +123,10 @@ export function InfiniteMovingCards({
                 height={22}
                 loading="lazy"
                 decoding="async"
-                className="h-[22px] w-[22px] shrink-0 object-contain"
+                className={cn(
+                  "h-[22px] w-[22px] shrink-0 object-contain",
+                  needsInvert(item.devicon) && "invert",
+                )}
                 aria-hidden="true"
               />
             )}

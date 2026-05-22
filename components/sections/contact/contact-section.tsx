@@ -205,6 +205,13 @@ export function ContactSection() {
               <p className="mt-3 text-muted-foreground">
                 Thank you! We&apos;ll be in touch within 24 hours.
               </p>
+              <button
+                type="button"
+                onClick={() => setShowSuccess(false)}
+                className="btn-ghost mt-6 text-sm"
+              >
+                Send Another Message
+              </button>
             </motion.div>
           ) : (
             <form
