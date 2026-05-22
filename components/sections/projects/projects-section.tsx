@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/lib/animated-icons";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Card3D } from "@/components/ui/card-3d";

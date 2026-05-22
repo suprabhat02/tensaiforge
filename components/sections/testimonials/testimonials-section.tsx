@@ -3,41 +3,7 @@
 import { AnimateIn } from "@/components/ui/animate-in";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Carousel } from "@/components/ui/carousel";
-
-const TESTIMONIAL_SLIDES = [
-  {
-    quote:
-      "TENSAIFORGE didn't just build our platform — they engineered it for the future. Our AI pipeline handles 10x the load with zero downtime.",
-    author: "Sarah Chen",
-    title: "CTO",
-    company: "NeuralScale AI",
-    src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
-  },
-  {
-    quote:
-      "The speed and quality are unreal. They delivered in 6 weeks what our previous agency couldn't do in 6 months.",
-    author: "Marcus Reid",
-    title: "Founder",
-    company: "Hypergrowth Labs",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
-  },
-  {
-    quote:
-      "Their AI-first approach transformed our customer support. Response times dropped 80% and satisfaction is at an all-time high.",
-    author: "Priya Sharma",
-    title: "VP Engineering",
-    company: "DataForge Systems",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
-  },
-  {
-    quote:
-      "Working with TENSAIFORGE felt like having an elite engineering team in-house. Every commit was production-ready.",
-    author: "James Okonkwo",
-    title: "Head of Product",
-    company: "CloudVerse",
-    src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
-  },
-];
+import { TESTIMONIALS } from "@/lib/constants";
 
 export function TestimonialsSection() {
   return (
@@ -60,7 +26,7 @@ export function TestimonialsSection() {
         </p>
       </AnimateIn>
 
-      <Carousel slides={TESTIMONIAL_SLIDES} />
+      <Carousel slides={TESTIMONIALS} />
     </section>
   );
 }

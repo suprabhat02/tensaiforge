@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "@/lib/animated-icons";
 import { SITE } from "@/lib/constants";
 import { TensaiForgeLogo } from "@/components/ui/tensaiforge-logo";
 

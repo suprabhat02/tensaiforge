@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "@/lib/animated-icons";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { SectionLabel } from "@/components/ui/section-label";
 import { BackgroundBeams } from "@/components/ui/background-beams";

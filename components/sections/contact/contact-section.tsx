@@ -14,7 +14,7 @@ import {
   CheckCircle2,
   AlertCircle,
   Phone,
-} from "lucide-react";
+} from "@/lib/animated-icons";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { SectionLabel } from "@/components/ui/section-label";
 import { FADE_UP, SCALE_IN } from "@/lib/animations";

@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import Image from "next/image";
-import { Zap, Gauge, Layers, Code2, Shield, Eye } from "lucide-react";
+import { Zap, Gauge, Layers, Code2, Shield, Eye } from "@/lib/animated-icons";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { SectionLabel } from "@/components/ui/section-label";
 import { GlowingEffect } from "@/components/ui/glowing-effect";

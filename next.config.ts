@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  trailingSlash: true, // recommended for static hosting
   reactStrictMode: true,
   // Gzip-compress all server responses (HTML, JSON, JS chunks).
   compress: true,

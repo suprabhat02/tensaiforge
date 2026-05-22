@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe, LayoutDashboard, Smartphone, Cloud, Brain } from "lucide-react";
+import {
+  Globe,
+  LayoutDashboard,
+  Smartphone,
+  Cloud,
+  Brain,
+} from "@/lib/animated-icons";
 import type { Service } from "@/lib/constants";
 import { SPRING_GENTLE } from "@/lib/animations";
 import { cn } from "@/lib/utils";

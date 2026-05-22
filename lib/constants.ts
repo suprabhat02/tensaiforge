@@ -48,7 +48,8 @@ export type Testimonial = {
   readonly quote: string;
   readonly author: string;
   readonly title: string;
-  readonly company: string;
+  readonly company?: string;
+  readonly src: string;
   readonly rating: number;
 };
 
@@ -343,37 +344,59 @@ export const TESTIMONIALS: readonly Testimonial[] = [
   {
     id: "t1",
     quote:
-      "TENSAIFORGE transformed our aging monolith into a cloud-native platform in 6 months. The engineering quality is unmatched — they think in systems, not just features.",
-    author: "Sarah Chen",
-    title: "CTO",
-    company: "Meridian Labs",
+      "The performance optimization work reduced load times and made our product feel dramatically more responsive.",
+    author: "Sandeep Sharma",
+    title: "AI Engineer",
+    company: "Topsoe",
+    src: "/sandeep-sharma.jpg",
     rating: 5,
   },
   {
     id: "t2",
     quote:
-      "Our AI chatbot now handles 80% of support tickets autonomously. The RAG implementation they built is genuinely state-of-the-art. Exceptional technical depth.",
-    author: "Marcus Johnson",
-    title: "VP Engineering",
-    company: "Ather Analytics",
+      "Suprabhat turned a complex analytics workflow into a fast, accessible dashboard. The UI felt polished and the performance wins were immediate.",
+    author: "Pooja Verma",
+    title: "Senior Quality Analyst",
+    src: "/pooja-verma.jpg",
     rating: 5,
   },
   {
     id: "t3",
     quote:
-      "From wireframes to production in 8 weeks. The team's attention to performance and accessibility set a new bar for what I expect from engineering partners.",
-    author: "Priya Nair",
-    title: "Product Director",
-    company: "Velox Commerce",
+      "He brought structure to our front-end architecture and delivered a design-system-ready UI that scaled across teams.",
+    author: "Sonu Gagan",
+    title: "Senior Specialist",
+    company: "Platform",
+    src: "/sonu-gagan.jpg",
     rating: 5,
   },
   {
     id: "t4",
     quote:
-      "Three re-architects failed before TENSAIFORGE. They diagnosed root causes in week one and delivered a stable, scalable system that's been running flawlessly for 18 months.",
-    author: "David Park",
-    title: "Founder & CEO",
-    company: "Orbital Finance",
+      "His accessibility-first approach helped us ship inclusive experiences without slowing delivery.",
+    author: "Supriya Suman",
+    title: "Associate",
+    company: "UX Research",
+    src: "/supriya-suman.jpg",
+    rating: 5,
+  },
+  {
+    id: "t5",
+    quote:
+      "A thoughtful collaborator who translates design intent into clean, scalable UI with real-world performance in mind.",
+    author: "Suraj",
+    title: "SEO Specialist",
+    src: "/suraj.jpg",
+    rating: 5,
+  },
+  {
+    id: "t6",
+    quote:
+      "The refresh delivered measurable improvements in engagement, and the visual polish made the product feel premium overnight.",
+    author: "Aditi Vimal",
+    title: "Executive",
+    company: "Regulatory Affairs",
+    src: "/aditi-vimal.jpg",
     rating: 5,
   },
 ] as const;

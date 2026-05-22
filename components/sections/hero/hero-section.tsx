@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, ArrowRight, Sparkles } from "lucide-react";
+import { Zap, ArrowRight, Sparkles } from "@/lib/animated-icons";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import { ParallaxHeroImages } from "@/components/ui/parallax-hero-images";
 import { FADE_UP, FADE_DOWN, EASE_OUT_EXPO } from "@/lib/animations";

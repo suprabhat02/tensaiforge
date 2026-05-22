@@ -3,17 +3,17 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { IconArrowLeft, IconArrowRight } from "@/lib/animated-icons";
 
 interface SlideData {
   quote: string;
   author: string;
   title: string;
-  company: string;
+  company?: string;
   src: string;
 }
 
-export const Carousel = ({ slides }: { slides: SlideData[] }) => {
+export const Carousel = ({ slides }: { slides: readonly SlideData[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -104,7 +104,9 @@ export const Carousel = ({ slides }: { slides: SlideData[] }) => {
                     {current.author}
                   </p>
                   <p className="text-sm text-white/50">
-                    {current.title}, {current.company}
+                    {current.company
+                      ? `${current.title}, ${current.company}`
+                      : current.title}
                   </p>
                 </div>
               </div>

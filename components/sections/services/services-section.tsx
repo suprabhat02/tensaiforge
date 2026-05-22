@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import Image from "next/image";
-import { Globe, Layers, Smartphone, Cloud, Bot } from "lucide-react";
+import { Globe, Layers, Smartphone, Cloud, Bot } from "@/lib/animated-icons";
 import { AnimateIn } from "@/components/ui/animate-in";
 import { SectionLabel } from "@/components/ui/section-label";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
