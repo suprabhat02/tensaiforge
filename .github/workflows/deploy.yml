@@ -32,3 +32,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: /domains/tensaiforge.com/public_html/
+          protocol: ftps
+          port: 21
+          timeout: 60000
