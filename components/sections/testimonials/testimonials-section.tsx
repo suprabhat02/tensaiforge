@@ -2,7 +2,7 @@
 
 import { AnimateIn } from "@/components/ui/animate-in";
 import { SectionLabel } from "@/components/ui/section-label";
-import { Carousel } from "@/components/ui/carousel";
+import { TestimonialsCarousel } from "@/components/ui/testimonials-carousel";
 import { TESTIMONIALS } from "@/lib/constants";
 
 export function TestimonialsSection() {
@@ -12,7 +12,7 @@ export function TestimonialsSection() {
       aria-labelledby="testimonials-heading"
       className="section-x section-y bg-gradient-to-b from-transparent via-secondary/20 to-transparent"
     >
-      <AnimateIn className="mb-16 text-center">
+      <AnimateIn className="mb-12 text-center">
         <SectionLabel>Testimonials</SectionLabel>
         <h2
           id="testimonials-heading"
@@ -26,7 +26,9 @@ export function TestimonialsSection() {
         </p>
       </AnimateIn>
 
-      <Carousel slides={TESTIMONIALS} />
+      <AnimateIn>
+        <TestimonialsCarousel slides={TESTIMONIALS} />
+      </AnimateIn>
     </section>
   );
 }
