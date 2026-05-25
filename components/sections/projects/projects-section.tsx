@@ -56,7 +56,7 @@ export function ProjectsSection() {
                     <div className="relative h-48 w-full overflow-hidden">
                       <Image
                         src={PROJECT_IMAGES[project.id] as string}
-                        alt={project.title}
+                        alt={`${project.title} – ${project.category} case study by TensaiForge`}
                         fill
                         sizes="(max-width: 1024px) 100vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"

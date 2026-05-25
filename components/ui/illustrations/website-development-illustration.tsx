@@ -1,0 +1,2205 @@
+"use client";
+
+import * as React from "react";
+import { SVGProps } from "react";
+import { cn } from "@/lib/utils";
+const WebsiteDevelopmentIllustration = ({
+  className,
+  ...props
+}: SVGProps<SVGSVGElement>) => (
+  <svg
+    className={cn("animated", className)}
+    id="freepik_stories-website-dev"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 500 500"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    role="img"
+    aria-label="Website development illustration"
+    {...props}
+  >
+    <style>
+      {
+        "svg#freepik_stories-website-dev:not(.animated) .animable {opacity: 0;}svg#freepik_stories-website-dev.animated #freepik--Server--inject-2 {animation: 6s Infinite  linear floating;animation-delay: 0s;}svg#freepik_stories-website-dev.animated #freepik--Cloud--inject-2 {animation: 6s Infinite  linear shake;animation-delay: 0s;}            @keyframes floating {                0% {                    opacity: 1;                    transform: translateY(0px);                }                50% {                    transform: translateY(-10px);                }                100% {                    opacity: 1;                    transform: translateY(0px);                }            }                    @keyframes shake {                10%, 90% {                    transform: translate3d(-1px, 0, 0);                  }                  20%, 80% {                    transform: translate3d(2px, 0, 0);                  }                  30%, 50%, 70% {                    transform: translate3d(-4px, 0, 0);                  }                  40%, 60% {                    transform: translate3d(4px, 0, 0);                  }            }        svg#freepik_stories-website-dev .animator-hidden { display: none; }"
+      }
+    </style>
+    <g
+      id="freepik--background-simple--inject-80"
+      className="animable"
+      style={{
+        transformOrigin: "250.003px 240px",
+      }}
+    >
+      <path
+        d="M152.92,93.35c19.94-11.21,42.32-18.28,65.13-18.43,26.76-.18,54,9.77,72.28,29.34,7.37,7.91,13.16,17.17,20.4,25.19s16.48,15,27.21,16.3c11.54,1.37,22.8-4,34.4-4.74,27-1.7,45.94,23.23,47.62,48.12,2,29.58-19.85,60.34-39.55,80.09-23.9,23.95-51.86,43.2-78.68,63.63-26.13,19.89-49.8,43.42-78.66,59.49-12.56,7-26.36,12.6-40.74,12.74-21.82.22-38.74-12.92-42.59-34.45-2.39-13.36-.07-26.94-2.27-40.34-5.45-33.08-36-55.94-49.6-86.58-11.37-25.56-10.06-55.83.83-81.6s30.76-47.17,54.11-62.59C146.1,97.35,149.48,95.29,152.92,93.35Z"
+        style={{
+          fill: "#F87171",
+          transformOrigin: "250.003px 240px",
+        }}
+        id="elwvitlcw5qj"
+        className="animable"
+      />
+      <g id="elwnfz7gzuqmd">
+        <path
+          d="M152.92,93.35c19.94-11.21,42.32-18.28,65.13-18.43,26.76-.18,54,9.77,72.28,29.34,7.37,7.91,13.16,17.17,20.4,25.19s16.48,15,27.21,16.3c11.54,1.37,22.8-4,34.4-4.74,27-1.7,45.94,23.23,47.62,48.12,2,29.58-19.85,60.34-39.55,80.09-23.9,23.95-51.86,43.2-78.68,63.63-26.13,19.89-49.8,43.42-78.66,59.49-12.56,7-26.36,12.6-40.74,12.74-21.82.22-38.74-12.92-42.59-34.45-2.39-13.36-.07-26.94-2.27-40.34-5.45-33.08-36-55.94-49.6-86.58-11.37-25.56-10.06-55.83.83-81.6s30.76-47.17,54.11-62.59C146.1,97.35,149.48,95.29,152.92,93.35Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.9,
+            transformOrigin: "250.003px 240px",
+          }}
+          className="animable"
+          id="el5sruyc9wnl7"
+        />
+      </g>
+    </g>
+    <g
+      id="freepik--Shadow--inject-80"
+      className="animable"
+      style={{
+        transformOrigin: "250px 416.24px",
+      }}
+    >
+      <ellipse
+        id="freepik--path--inject-80"
+        cx={250}
+        cy={416.24}
+        rx={193.89}
+        ry={11.32}
+        style={{
+          fill: "rgb(245, 245, 245)",
+          transformOrigin: "250px 416.24px",
+        }}
+        className="animable"
+      />
+    </g>
+    <g
+      id="freepik--Ladder--inject-80"
+      className="animable"
+      style={{
+        transformOrigin: "338.555px 387.3px",
+      }}
+    >
+      <polygon
+        points="334.38 416.24 341.73 416.24 351.73 361 344.38 361 334.38 416.24"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "343.055px 388.62px",
+        }}
+        id="elq3dun1t0pxi"
+        className="animable"
+      />
+      <g id="elblzdh88lm4">
+        <polygon
+          points="334.38 416.24 341.73 416.24 351.73 361 344.38 361 334.38 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "343.055px 388.62px",
+          }}
+          className="animable"
+          id="ell5wyn0zbkn"
+        />
+      </g>
+      <g id="elxnbyaoru25">
+        <polygon
+          points="334.38 416.24 339.73 416.24 349.73 361 344.38 361 334.38 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "342.055px 388.62px",
+          }}
+          className="animable"
+          id="eluyu168fvisl"
+        />
+      </g>
+      <path
+        d="M313.69,377.43h29.39a1.61,1.61,0,0,0,1.62-1.62h0a1.61,1.61,0,0,0-1.62-1.62H313.69a1.61,1.61,0,0,0-1.62,1.62h0A1.61,1.61,0,0,0,313.69,377.43Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "328.385px 375.81px",
+        }}
+        id="el09ej473eoilm"
+        className="animable"
+      />
+      <path
+        d="M310.42,395.93h29.4a1.63,1.63,0,0,0,1.62-1.63h0a1.63,1.63,0,0,0-1.62-1.62h-29.4a1.63,1.63,0,0,0-1.62,1.62h0A1.63,1.63,0,0,0,310.42,395.93Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "325.12px 394.305px",
+        }}
+        id="elpkng7xvcs5q"
+        className="animable"
+      />
+      <polygon
+        points="304.38 416.24 311.73 416.24 321.73 361 314.38 361 304.38 416.24"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "313.055px 388.62px",
+        }}
+        id="el5p33iyewltt"
+        className="animable"
+      />
+      <g id="el1l8feklqfb8i">
+        <polygon
+          points="304.38 416.24 311.73 416.24 321.73 361 314.38 361 304.38 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "313.055px 388.62px",
+          }}
+          className="animable"
+          id="elb7ugpmlqne6"
+        />
+      </g>
+      <g id="elwh0szmzwmr7">
+        <polygon
+          points="304.38 416.24 309.73 416.24 319.73 361 314.38 361 304.38 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "312.055px 388.62px",
+          }}
+          className="animable"
+          id="el339ei8mi4dd"
+        />
+      </g>
+      <polygon
+        points="372.73 416.24 365.38 416.24 355.38 361 362.73 361 372.73 416.24"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "364.055px 388.62px",
+        }}
+        id="el7xrc68zfiva"
+        className="animable"
+      />
+      <g id="elzvmrajz5rr">
+        <polygon
+          points="372.73 416.24 365.38 416.24 355.38 361 362.73 361 372.73 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.4,
+            transformOrigin: "364.055px 388.62px",
+          }}
+          className="animable"
+          id="elz0zs6f9l9v"
+        />
+      </g>
+      <g id="el8nj4hhgxyu3">
+        <polygon
+          points="370.73 416.24 365.38 416.24 355.38 361 360.73 361 370.73 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "363.055px 388.62px",
+          }}
+          className="animable"
+          id="el1hf9kd9f7ld"
+        />
+      </g>
+      <path
+        d="M359.82,377.43h-29.4a1.62,1.62,0,0,1-1.62-1.62h0a1.62,1.62,0,0,1,1.62-1.62h29.4a1.62,1.62,0,0,1,1.62,1.62h0A1.62,1.62,0,0,1,359.82,377.43Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "345.12px 375.81px",
+        }}
+        id="el2tbbgq9gygf"
+        className="animable"
+      />
+      <path
+        d="M363.08,395.93H333.69a1.62,1.62,0,0,1-1.62-1.63h0a1.62,1.62,0,0,1,1.62-1.62h29.39a1.62,1.62,0,0,1,1.62,1.62h0A1.62,1.62,0,0,1,363.08,395.93Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "348.385px 394.305px",
+        }}
+        id="el5phhxjr7z5g"
+        className="animable"
+      />
+      <g id="eleth6nxf5l5w">
+        <path
+          d="M359.82,377.43h-29.4a1.62,1.62,0,0,1-1.62-1.62h0a1.62,1.62,0,0,1,1.62-1.62h29.4a1.62,1.62,0,0,1,1.62,1.62h0A1.62,1.62,0,0,1,359.82,377.43Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "345.12px 375.81px",
+          }}
+          className="animable"
+          id="eluajfqfm5x1q"
+        />
+      </g>
+      <g id="elszsig9c29g">
+        <path
+          d="M363.08,395.93H333.69a1.62,1.62,0,0,1-1.62-1.63h0a1.62,1.62,0,0,1,1.62-1.62h29.39a1.62,1.62,0,0,1,1.62,1.62h0A1.62,1.62,0,0,1,363.08,395.93Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "348.385px 394.305px",
+          }}
+          className="animable"
+          id="el65da7edh46"
+        />
+      </g>
+      <polygon
+        points="342.73 416.24 335.38 416.24 325.38 361 332.73 361 342.73 416.24"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "334.055px 388.62px",
+        }}
+        id="ely5lrnq46g7c"
+        className="animable"
+      />
+      <g id="el2jjut3vzvp6">
+        <polygon
+          points="342.73 416.24 335.38 416.24 325.38 361 332.73 361 342.73 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.4,
+            transformOrigin: "334.055px 388.62px",
+          }}
+          className="animable"
+          id="elrryod0b7vq"
+        />
+      </g>
+      <g id="el3w4l83aezmb">
+        <polygon
+          points="340.73 416.24 335.38 416.24 325.38 361 330.73 361 340.73 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "333.055px 388.62px",
+          }}
+          className="animable"
+          id="ele9q2vu8n6jl"
+        />
+      </g>
+      <rect
+        x={311.31}
+        y={358.36}
+        width={55.47}
+        height={5.27}
+        rx={1.19}
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "339.045px 360.995px",
+        }}
+        id="elnyrmgetfr3a"
+        className="animable"
+      />
+      <g id="el7uj5dfmekeh">
+        <rect
+          x={311.31}
+          y={358.36}
+          width={22.56}
+          height={5.27}
+          rx={1.19}
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "322.59px 360.995px",
+          }}
+          className="animable"
+          id="elfxovfzj7418"
+        />
+      </g>
+    </g>
+    <g
+      id="freepik--Screen--inject-80"
+      className="animable"
+      style={{
+        transformOrigin: "160.775px 393.685px",
+      }}
+    >
+      <rect
+        x={127.2}
+        y={371.85}
+        width={67.15}
+        height={43.67}
+        style={{
+          fill: "#F87171",
+          transformOrigin: "160.775px 393.685px",
+        }}
+        id="eljy42op0pm9e"
+        className="animable"
+      />
+      <g id="elbirbv9shsf7">
+        <rect
+          x={127.2}
+          y={371.85}
+          width={67.15}
+          height={43.67}
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.6,
+            isolation: "isolate",
+            transformOrigin: "160.775px 393.685px",
+          }}
+          className="animable"
+          id="elsaqoksgv6q"
+        />
+      </g>
+      <rect
+        x={129.66}
+        y={380.04}
+        width={62.24}
+        height={33.3}
+        style={{
+          fill: "#F87171",
+          transformOrigin: "160.78px 396.69px",
+        }}
+        id="el6z4cluhj04c"
+        className="animable"
+      />
+      <rect
+        x={134.73}
+        y={385.01}
+        width={46.04}
+        height={1.43}
+        style={{
+          fill: "rgb(255, 255, 255)",
+          transformOrigin: "157.75px 385.725px",
+        }}
+        id="elg7fucgbpbsp"
+        className="animable"
+      />
+      <rect
+        x={134.73}
+        y={389.4}
+        width={22.09}
+        height={1.43}
+        style={{
+          fill: "rgb(255, 255, 255)",
+          transformOrigin: "145.775px 390.115px",
+        }}
+        id="elidddp6rrh6k"
+        className="animable"
+      />
+      <rect
+        x={134.73}
+        y={393.79}
+        width={27.82}
+        height={1.43}
+        style={{
+          fill: "rgb(255, 255, 255)",
+          transformOrigin: "148.64px 394.505px",
+        }}
+        id="el779851mnyvc"
+        className="animable"
+      />
+      <rect
+        x={134.73}
+        y={398.17}
+        width={9.8}
+        height={1.43}
+        style={{
+          fill: "rgb(255, 255, 255)",
+          transformOrigin: "139.63px 398.885px",
+        }}
+        id="elv4dvsltwis"
+        className="animable"
+      />
+      <rect
+        x={134.73}
+        y={402.56}
+        width={6.35}
+        height={1.43}
+        style={{
+          fill: "rgb(255, 255, 255)",
+          transformOrigin: "137.905px 403.275px",
+        }}
+        id="elfixqgtzx64o"
+        className="animable"
+      />
+    </g>
+    <g
+      id="freepik--Device--inject-80"
+      className="animable"
+      style={{
+        transformOrigin: "250px 290.31px",
+      }}
+    >
+      <polygon
+        points="277.33 416.24 222.67 416.24 231.92 343.57 268.08 343.57 277.33 416.24"
+        style={{
+          fill: "#F87171",
+          transformOrigin: "250px 379.905px",
+        }}
+        id="eltykcq0obn68"
+        className="animable"
+      />
+      <g id="elssdtmziq6mr">
+        <polygon
+          points="277.33 416.24 222.67 416.24 229 366.52 231.93 343.57 268.07 343.57 272.39 377.43 277.33 416.24"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.6,
+            transformOrigin: "250px 379.905px",
+          }}
+          className="animable"
+          id="eljzjvfs1e1n"
+        />
+      </g>
+      <g id="elgtxr7sct19g">
+        <polygon
+          points="272.39 377.43 229 366.52 231.93 343.57 268.07 343.57 272.39 377.43"
+          style={{
+            opacity: 0.1,
+            isolation: "isolate",
+            transformOrigin: "250.695px 360.5px",
+          }}
+          className="animable"
+          id="elyuntwvglo8j"
+        />
+      </g>
+      <path
+        d="M378.87,164.38H121.13a6.59,6.59,0,0,0-6.59,6.6V345.46a6.59,6.59,0,0,0,6.59,6.59H378.87a6.59,6.59,0,0,0,6.59-6.59V171A6.59,6.59,0,0,0,378.87,164.38Z"
+        style={{
+          fill: "#F87171",
+          transformOrigin: "250px 258.215px",
+        }}
+        id="elg0fy25ouohd"
+        className="animable"
+      />
+      <g id="el5jipfd1oons">
+        <path
+          d="M378.87,164.38H121.13a6.59,6.59,0,0,0-6.59,6.6V345.46a6.59,6.59,0,0,0,6.59,6.59H378.87a6.59,6.59,0,0,0,6.59-6.59V171A6.59,6.59,0,0,0,378.87,164.38Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "250px 258.215px",
+          }}
+          className="animable"
+          id="elsoqtpwhmqzn"
+        />
+      </g>
+      <rect
+        x={123.22}
+        y={170.84}
+        width={253.57}
+        height={168.25}
+        style={{
+          fill: "#F87171",
+          transformOrigin: "250.005px 254.965px",
+        }}
+        id="elgrtmdscpitm"
+        className="animable"
+      />
+      <rect
+        x={203.05}
+        y={410.78}
+        width={93.89}
+        height={5.37}
+        rx={1.04}
+        style={{
+          fill: "#F87171",
+          transformOrigin: "249.995px 413.465px",
+        }}
+        id="el1tjw2o9loof"
+        className="animable"
+      />
+      <g id="elfz4uy82q7ep">
+        <rect
+          x={203.05}
+          y={410.78}
+          width={93.89}
+          height={5.37}
+          rx={1.04}
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "249.995px 413.465px",
+          }}
+          className="animable"
+          id="el96er1whlytb"
+        />
+      </g>
+      <g id="elk60oa37cbp">
+        <rect
+          x={123.22}
+          y={171}
+          width={253.57}
+          height={25.08}
+          style={{
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "250.005px 183.54px",
+          }}
+          className="animable"
+          id="eln1gvbhoyl8r"
+        />
+      </g>
+      <g id="elj1v0onq9o3s">
+        <rect
+          x={123.22}
+          y={196.38}
+          width={108.66}
+          height={142.71}
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.4,
+            transformOrigin: "177.55px 267.735px",
+          }}
+          className="animable"
+          id="el7qpaqfgnz8h"
+        />
+      </g>
+      <polyline
+        points="337.76 232.78 337.76 235.28 335.26 235.28"
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "336.51px 234.03px",
+        }}
+        id="elxvixnptro8r"
+        className="animable"
+      />
+      <line
+        x1={329.98}
+        y1={235.28}
+        x2={248.08}
+        y2={235.28}
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          strokeDasharray: "5.28374, 5.28374",
+          transformOrigin: "289.03px 235.28px",
+        }}
+        id="elyo4vjogryw"
+        className="animable"
+      />
+      <polyline
+        points="245.44 235.28 242.94 235.28 242.94 232.78"
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "244.19px 234.03px",
+        }}
+        id="elzsjaa4lll6o"
+        className="animable"
+      />
+      <line
+        x1={242.94}
+        y1={228.25}
+        x2={242.94}
+        y2={185.22}
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          strokeDasharray: "4.52941, 4.52941",
+          transformOrigin: "242.94px 206.735px",
+        }}
+        id="el7t4d332u6m2"
+        className="animable"
+      />
+      <polyline
+        points="242.94 182.96 242.94 180.46 245.44 180.46"
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "244.19px 181.71px",
+        }}
+        id="eld0jzvfgyr0o"
+        className="animable"
+      />
+      <line
+        x1={250.72}
+        y1={180.46}
+        x2={332.62}
+        y2={180.46}
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          strokeDasharray: "5.28374, 5.28374",
+          transformOrigin: "291.67px 180.46px",
+        }}
+        id="elgtmaikv4st"
+        className="animable"
+      />
+      <polyline
+        points="335.26 180.46 337.76 180.46 337.76 182.96"
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "336.51px 181.71px",
+        }}
+        id="el4d65c5wy0yn"
+        className="animable"
+      />
+      <line
+        x1={337.76}
+        y1={187.49}
+        x2={337.76}
+        y2={230.52}
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          strokeDasharray: "4.52941, 4.52941",
+          transformOrigin: "337.76px 209.005px",
+        }}
+        id="eljk30cn0e2jr"
+        className="animable"
+      />
+      <rect
+        x={336.18}
+        y={178.87}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "#F87171",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "337.765px 180.455px",
+        }}
+        id="elre0fedyx66q"
+        className="animable"
+      />
+      <rect
+        x={336.18}
+        y={233.7}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "#F87171",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "337.765px 235.285px",
+        }}
+        id="elk7k9mpdx2h"
+        className="animable"
+      />
+      <rect
+        x={241.35}
+        y={178.87}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "#F87171",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "242.935px 180.455px",
+        }}
+        id="elj6pp5x8tdl"
+        className="animable"
+      />
+      <rect
+        x={241.35}
+        y={233.7}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "#F87171",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "242.935px 235.285px",
+        }}
+        id="elqziwqj8lcmb"
+        className="animable"
+      />
+      <rect
+        x={288.77}
+        y={178.87}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "#F87171",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "290.355px 180.455px",
+        }}
+        id="eln62b38j4ryf"
+        className="animable"
+      />
+      <rect
+        x={288.77}
+        y={233.7}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "#F87171",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "290.355px 235.285px",
+        }}
+        id="el1wtve5edwbwh"
+        className="animable"
+      />
+      <rect
+        x={336.18}
+        y={206.28}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "#F87171",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "337.765px 207.865px",
+        }}
+        id="el0oxjven6old"
+        className="animable"
+      />
+      <rect
+        x={241.35}
+        y={206.28}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "#F87171",
+          stroke: "rgb(255, 255, 255)",
+          strokeMiterlimit: 10,
+          transformOrigin: "242.935px 207.865px",
+        }}
+        id="elhmau9bcj2b5"
+        className="animable"
+      />
+      <g id="ely8uoe6kacp">
+        <rect
+          x={304.05}
+          y={198.87}
+          width={26.99}
+          height={9.99}
+          rx={1.89}
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "317.545px 203.865px",
+          }}
+          className="animable"
+          id="elt39svpmq3"
+        />
+      </g>
+      <g id="el35oz2bllfxp">
+        <rect
+          x={264.05}
+          y={198.87}
+          width={26.99}
+          height={9.99}
+          rx={1.89}
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "277.545px 203.865px",
+          }}
+          className="animable"
+          id="elwul7vvq77ln"
+        />
+      </g>
+      <g id="elf4jg922e5q">
+        <rect
+          x={212.56}
+          y={320.46}
+          width={26.99}
+          height={9.99}
+          rx={1.89}
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "226.055px 325.455px",
+          }}
+          className="animable"
+          id="elsv2tl3c79rm"
+        />
+      </g>
+      <line
+        x1={360.05}
+        y1={179.92}
+        x2={368.49}
+        y2={179.92}
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: "1.5px",
+          transformOrigin: "364.27px 179.92px",
+        }}
+        id="el2n5axdu4j7y"
+        className="animable"
+      />
+      <line
+        x1={360.05}
+        y1={183.92}
+        x2={368.49}
+        y2={183.92}
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: "1.5px",
+          transformOrigin: "364.27px 183.92px",
+        }}
+        id="elbgawii6r42q"
+        className="animable"
+      />
+      <line
+        x1={360.05}
+        y1={187.92}
+        x2={368.49}
+        y2={187.92}
+        style={{
+          fill: "none",
+          stroke: "rgb(255, 255, 255)",
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: "1.5px",
+          transformOrigin: "364.27px 187.92px",
+        }}
+        id="elh5cfn5zux4k"
+        className="animable"
+      />
+      <g id="elr9wiasbyg3j">
+        <rect
+          x={140.41}
+          y={218.5}
+          width={85.05}
+          height={85.05}
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.5,
+            transformOrigin: "182.935px 261.025px",
+          }}
+          className="animable"
+          id="eltp1pzv4brhm"
+        />
+      </g>
+      <line
+        x1={176.01}
+        y1={225.45}
+        x2={176.01}
+        y2={298.82}
+        style={{
+          fill: "none",
+          stroke: "#F87171",
+          strokeMiterlimit: 10,
+          transformOrigin: "176.01px 262.135px",
+        }}
+        id="el529k7170sww"
+        className="animable"
+      />
+      <path
+        d="M212.69,298.82h0A36.69,36.69,0,0,1,176,262.13h0a36.68,36.68,0,0,1,36.68-36.68h0"
+        style={{
+          fill: "none",
+          stroke: "#F87171",
+          strokeMiterlimit: 10,
+          transformOrigin: "194.345px 262.135px",
+        }}
+        id="el7ud5d10f0n7"
+        className="animable"
+      />
+      <rect
+        x={211.11}
+        y={223.87}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "rgb(255, 255, 255)",
+          stroke: "#F87171",
+          strokeMiterlimit: 10,
+          transformOrigin: "212.695px 225.455px",
+        }}
+        id="els2f1wj00e08"
+        className="animable"
+      />
+      <rect
+        x={211.11}
+        y={297.23}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "rgb(255, 255, 255)",
+          stroke: "#F87171",
+          strokeMiterlimit: 10,
+          transformOrigin: "212.695px 298.815px",
+        }}
+        id="elaajh670incf"
+        className="animable"
+      />
+      <rect
+        x={174.43}
+        y={260.55}
+        width={3.17}
+        height={3.17}
+        style={{
+          fill: "rgb(255, 255, 255)",
+          stroke: "#F87171",
+          strokeMiterlimit: 10,
+          transformOrigin: "176.015px 262.135px",
+        }}
+        id="elydbiyhgxear"
+        className="animable"
+      />
+      <path
+        d="M176.83,225.45a.82.82,0,1,1-.82-.82A.83.83,0,0,1,176.83,225.45Z"
+        style={{
+          fill: "rgb(255, 255, 255)",
+          stroke: "#F87171",
+          strokeMiterlimit: 10,
+          transformOrigin: "176.01px 225.45px",
+        }}
+        id="elszd0jukn5o7"
+        className="animable"
+      />
+      <path
+        d="M176.83,298.82A.82.82,0,1,1,176,298,.82.82,0,0,1,176.83,298.82Z"
+        style={{
+          fill: "rgb(255, 255, 255)",
+          stroke: "#F87171",
+          strokeMiterlimit: 10,
+          transformOrigin: "176.01px 298.82px",
+        }}
+        id="elp718vdfwlj9"
+        className="animable"
+      />
+      <g id="el4z6ck3x2f89">
+        <path
+          d="M316.93,321.67H291.18a7.44,7.44,0,0,1-7.44-7.44h0a7.44,7.44,0,0,1,7.44-7.44h25.75a7.44,7.44,0,0,1,7.44,7.44h0A7.44,7.44,0,0,1,316.93,321.67Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "304.055px 314.23px",
+          }}
+          className="animable"
+          id="elw89cb5g0anm"
+        />
+      </g>
+      <g id="elg1skkyads25">
+        <path
+          d="M339.55,258.22H260a1.63,1.63,0,0,1-1.63-1.63h0A1.62,1.62,0,0,1,260,255h79.54a1.62,1.62,0,0,1,1.63,1.62h0A1.63,1.63,0,0,1,339.55,258.22Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "299.77px 256.61px",
+          }}
+          className="animable"
+          id="elftsbjq5uczl"
+        />
+      </g>
+      <g id="el2kasqusrhba">
+        <path
+          d="M339.55,270.09H260a1.62,1.62,0,0,1-1.63-1.62h0a1.63,1.63,0,0,1,1.63-1.63h79.54a1.63,1.63,0,0,1,1.63,1.63h0A1.62,1.62,0,0,1,339.55,270.09Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "299.77px 268.465px",
+          }}
+          className="animable"
+          id="elw79opfeqix9"
+        />
+      </g>
+      <g id="el70s40dvluhi">
+        <path
+          d="M339.55,282H290a1.63,1.63,0,0,1-1.63-1.62h0a1.63,1.63,0,0,1,1.63-1.63h49.54a1.63,1.63,0,0,1,1.63,1.63h0A1.63,1.63,0,0,1,339.55,282Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "314.77px 280.375px",
+          }}
+          className="animable"
+          id="eljb4s4xevn2n"
+        />
+      </g>
+      <g id="elfe3b61tihho">
+        <rect
+          x={131.23}
+          y={177.95}
+          width={5.62}
+          height={5.62}
+          style={{
+            opacity: 0.4,
+            isolation: "isolate",
+            transformOrigin: "134.04px 180.76px",
+          }}
+          className="animable"
+          id="elee906xl099b"
+        />
+      </g>
+      <g id="ellzapxs9ay9b">
+        <rect
+          x={142.15}
+          y={177.95}
+          width={5.62}
+          height={5.62}
+          rx={1.44}
+          style={{
+            opacity: 0.4,
+            isolation: "isolate",
+            transformOrigin: "144.96px 180.76px",
+          }}
+          className="animable"
+          id="eljet1ksczopk"
+        />
+      </g>
+      <g id="eltswx6yai0ve">
+        <rect
+          x={153.08}
+          y={177.95}
+          width={5.62}
+          height={5.62}
+          rx={2.57}
+          style={{
+            opacity: 0.4,
+            isolation: "isolate",
+            transformOrigin: "155.89px 180.76px",
+          }}
+          className="animable"
+          id="elosigi9tnuab"
+        />
+      </g>
+      <g id="elx9ld8n3adi">
+        <path
+          d="M148.45,316.5v-2.19l-1.12-.1a6.18,6.18,0,0,0-.84-2l.72-.87-1.55-1.55-.87.72a6.18,6.18,0,0,0-2-.84l-.1-1.12h-2.19l-.11,1.12a6.22,6.22,0,0,0-2,.84l-.87-.72-1.55,1.55.72.87a5.78,5.78,0,0,0-.84,2l-1.13.1v2.19l1.13.11a5.81,5.81,0,0,0,.84,2l-.72.88,1.55,1.54.87-.72a5.81,5.81,0,0,0,2,.84l.11,1.13h2.19l.1-1.13a5.78,5.78,0,0,0,2-.84l.87.72,1.55-1.54-.72-.88a6,6,0,0,0,.84-2Zm-6.89,1.87a3,3,0,1,1,3-3A3,3,0,0,1,141.56,318.37Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.9,
+            transformOrigin: "141.585px 315.415px",
+          }}
+          className="animable"
+          id="elmb6z4qpw9z"
+        />
+      </g>
+      <g id="elr5ft9pwj5ce">
+        <path
+          d="M157.33,322.68V321l-.88-.09a4.61,4.61,0,0,0-.66-1.58l.56-.69-1.21-1.21-.68.57a4.66,4.66,0,0,0-1.59-.66l-.08-.89h-1.72l-.08.89a4.66,4.66,0,0,0-1.59.66l-.68-.57-1.22,1.21.57.69a4.61,4.61,0,0,0-.66,1.58l-.88.09v1.71l.88.09a4.61,4.61,0,0,0,.66,1.58l-.57.69,1.22,1.21.68-.57a4.66,4.66,0,0,0,1.59.66l.08.88h1.72l.08-.88a4.66,4.66,0,0,0,1.59-.66l.68.57,1.21-1.21-.56-.69a4.61,4.61,0,0,0,.66-1.58Zm-5.4,1.47a2.33,2.33,0,1,1,2.32-2.33A2.32,2.32,0,0,1,151.93,324.15Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.6,
+            transformOrigin: "151.93px 321.85px",
+          }}
+          className="animable"
+          id="el5n7re2e8w9"
+        />
+      </g>
+      <g id="el0s09wi60z0i">
+        <path
+          d="M148.45,327.55v-1.44l-.74-.07a3.9,3.9,0,0,0-.55-1.33l.48-.57-1-1-.58.47a3.9,3.9,0,0,0-1.33-.55l-.07-.74H143.2l-.07.74a3.9,3.9,0,0,0-1.33.55l-.58-.47-1,1,.48.57a3.9,3.9,0,0,0-.55,1.33l-.75.07v1.44l.75.07a3.87,3.87,0,0,0,.55,1.34l-.48.57,1,1,.58-.48a3.73,3.73,0,0,0,1.33.56l.07.74h1.44l.07-.74a3.73,3.73,0,0,0,1.33-.56l.58.48,1-1-.48-.57a3.87,3.87,0,0,0,.55-1.34Zm-4.53,1.23a1.95,1.95,0,1,1,2-1.95A1.95,1.95,0,0,1,143.92,328.78Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.4,
+            transformOrigin: "143.925px 326.835px",
+          }}
+          className="animable"
+          id="elv6i5bw3gyx"
+        />
+      </g>
+      <polygon
+        points="337.18 179.89 341.42 191.23 348.51 184.13 337.18 179.89"
+        style={{
+          fill: "#F87171",
+          transformOrigin: "342.845px 185.56px",
+        }}
+        id="elt7ds4j79m3j"
+        className="animable"
+      />
+      <g id="el9krcullzhm4">
+        <rect
+          x={343.85}
+          y={185.2}
+          width={2.24}
+          height={4.97}
+          style={{
+            fill: "#F87171",
+            transformOrigin: "344.97px 187.685px",
+            transform: "rotate(-45deg)",
+          }}
+          className="animable"
+          id="elh05gchplyig"
+        />
+      </g>
+      <g id="eln3spne1ng1">
+        <polygon
+          points="348.51 184.13 337.18 179.89 341.42 191.23 344.18 188.47 345.93 190.23 347.51 188.65 345.76 186.89 348.51 184.13"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.4,
+            transformOrigin: "342.845px 185.56px",
+          }}
+          className="animable"
+          id="el6wwwc48f5ju"
+        />
+      </g>
+      <path
+        d="M163.46,220.42l10.67,4-5.59-5.59a1.09,1.09,0,0,1-1.31-.17,1.1,1.1,0,0,1,1.56-1.56,1.09,1.09,0,0,1,.17,1.31l5.59,5.59-4-10.67-3.54.78-.13-1.27-.67-.67-3.92,3.92.67.67,1.28.13Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "168.42px 218.295px",
+        }}
+        id="ellvocik0a0w"
+        className="animable"
+      />
+      <g id="elk4f81gliq8d">
+        <path
+          d="M163.46,220.42l10.67,4-5.59-5.59a1.09,1.09,0,0,1-1.31-.17,1.1,1.1,0,0,1,1.56-1.56,1.09,1.09,0,0,1,.17,1.31l5.59,5.59-4-10.67-3.54.78-.13-1.27-.67-.67-3.92,3.92.67.67,1.28.13Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            transformOrigin: "168.42px 218.295px",
+          }}
+          className="animable"
+          id="elmwkiud5kllr"
+        />
+      </g>
+      <g id="el097298pxwq8t">
+        <g
+          style={{
+            opacity: 0.1,
+            transformOrigin: "206.03px 254.965px",
+          }}
+          className="animable"
+          id="elyjnj6qctox"
+        >
+          <polygon
+            points="160.3 170.84 122.72 311.26 122.72 170.84 160.3 170.84"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              transformOrigin: "141.51px 241.05px",
+            }}
+            id="elvcmc1ve2foc"
+            className="animable"
+          />
+          <polygon
+            points="202.71 170.84 157.68 339.09 126.66 339.09 171.68 170.84 202.71 170.84"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              transformOrigin: "164.685px 254.965px",
+            }}
+            id="el12cd0mrem9tn"
+            className="animable"
+          />
+          <polygon
+            points="247.81 170.84 202.78 339.09 188.75 339.09 233.78 170.84 247.81 170.84"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              transformOrigin: "218.28px 254.965px",
+            }}
+            id="eluqncrbm2ii"
+            className="animable"
+          />
+          <polygon
+            points="289.34 170.84 244.31 339.09 239.29 339.09 284.32 170.84 289.34 170.84"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              transformOrigin: "264.315px 254.965px",
+            }}
+            id="eli0kpb01lzjk"
+            className="animable"
+          />
+        </g>
+      </g>
+    </g>
+    <g
+      id="freepik--character-2--inject-80"
+      className="animable"
+      style={{
+        transformOrigin: "408.998px 290.216px",
+      }}
+    >
+      <path
+        d="M441.9,208c3.55,4.09,21.61,38.88,18.12,47s-32.43-1.24-32.43-1.24l1.73-11.47s11.24.4,12.32-.67-15.21-17.33-15.21-17.33Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "443.448px 233.157px",
+        }}
+        id="el3tf4dnaqp64"
+        className="animable"
+      />
+      <g id="el1pa18i0a8xj">
+        <g
+          style={{
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "443.43px 233.12px",
+          }}
+          className="animable"
+          id="elzrwc2ubwo69"
+        >
+          <path
+            d="M460,255a4.38,4.38,0,0,1-2.11,2.14l0,0-.58.26-.08,0a4.44,4.44,0,0,1-.55.19,12.13,12.13,0,0,1-2.5.52l-.73.07c-.36,0-.72.05-1.09.06l-1,0c-9.7,0-23.81-4.55-23.81-4.55l1.73-11.47s11.24.4,12.32-.67c.26-.26-.51-1.42-1.82-3l0,0c-3.18-3.91-9.55-10.42-12.18-13.08l-1.19-1.2L441.9,208C445.45,212.05,463.51,246.84,460,255Z"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              transformOrigin: "443.43px 233.12px",
+            }}
+            id="el4h4s2jnirgw"
+            className="animable"
+          />
+        </g>
+      </g>
+      <g id="eld4crhwqc9yq">
+        <path
+          d="M457.91,257.11l0,0-.58.26-.08,0a4.44,4.44,0,0,1-.55.19,12.13,12.13,0,0,1-2.5.52l-.73.07c-.36,0-.72.05-1.09.06l-1,0c-9.7,0-23.81-4.55-23.81-4.55l1.73-11.47s12.66,1.07,13.74,0a.13.13,0,0,0,0,0c.2-.42-1.2-1.84-3.27-3.65l0,0c-3.18-3.91-9.55-10.42-12.18-13.08l7.32-7.82,5.57-.6S452.81,237,457.91,257.11Z"
+          style={{
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "442.74px 237.625px",
+          }}
+          className="animable"
+          id="eld2ayq0x8nrf"
+        />
+      </g>
+      <path
+        d="M405.41,206.82c-2,1.45-3,3.51-2.2,4.6l52.84,72.85c.79,1.09,3.06.79,5.06-.66s3-3.52,2.2-4.6l-52.84-72.86C409.68,205.07,407.42,205.36,405.41,206.82Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "433.26px 245.212px",
+        }}
+        id="elnv0z4grew1"
+        className="animable"
+      />
+      <g id="eleke650cg6ss">
+        <path
+          d="M410.47,206.15,463.31,279c.79,1.08-.2,3.14-2.2,4.6s-4.27,1.74-5.05.66l-52.84-72.86a2.26,2.26,0,0,1,.19-2.42,5.85,5.85,0,0,1,1-1.31,7.23,7.23,0,0,1,1-.86C407.42,205.37,409.68,205.07,410.47,206.15Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "433.269px 245.208px",
+          }}
+          className="animable"
+          id="elqe5dj6cazt"
+        />
+      </g>
+      <g id="elnl239vutki">
+        <path
+          d="M463.31,279c.79,1.08-.2,3.14-2.2,4.6s-4.27,1.74-5.05.66c-.44-.6.65-1.51,1.29-2.82L403.41,209a5.85,5.85,0,0,1,1-1.31l52.85,72.86a8.55,8.55,0,0,1,1-.87C460.26,278.22,462.52,277.92,463.31,279Z"
+          style={{
+            opacity: 0.3,
+            isolation: "isolate",
+            transformOrigin: "433.496px 246.302px",
+          }}
+          className="animable"
+          id="elzhhbnj5ey4o"
+        />
+      </g>
+      <path
+        d="M398.87,204.8c-1.69,1.8-2.27,4-1.29,4.93l65.7,61.51c1,.92,3.15.2,4.84-1.61s2.27-4,1.29-4.94l-65.7-61.51C402.73,202.27,400.56,203,398.87,204.8Z"
+        style={{
+          fill: "#F87171",
+          transformOrigin: "433.495px 237.214px",
+        }}
+        id="el6kh5g841dsd"
+        className="animable"
+      />
+      <g id="el9ne1cby1wwq">
+        <path
+          d="M403.71,203.19l65.7,61.51c1,.91.4,3.12-1.29,4.93s-3.86,2.52-4.84,1.61l-65.7-61.51a2.29,2.29,0,0,1-.27-2.42,6.2,6.2,0,0,1,.74-1.48,8.4,8.4,0,0,1,.82-1C400.56,203,402.73,202.27,403.71,203.19Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.7,
+            transformOrigin: "433.489px 237.214px",
+          }}
+          className="animable"
+          id="el36os435d4ea"
+        />
+      </g>
+      <g id="elkb6q3fj9ygj">
+        <path
+          d="M469.41,264.7c1,.91.4,3.12-1.29,4.93s-3.86,2.52-4.84,1.61c-.54-.51.36-1.6.74-3l-66.71-60.91a6.2,6.2,0,0,1,.74-1.48l65.71,61.52a7.69,7.69,0,0,1,.81-1C466.26,264.5,468.43,263.78,469.41,264.7Z"
+          style={{
+            opacity: 0.3,
+            isolation: "isolate",
+            transformOrigin: "433.603px 238.743px",
+          }}
+          className="animable"
+          id="elhkygxodm0t"
+        />
+      </g>
+      <path
+        d="M414.66,401.1l-5,.08c-5.09-23.91-8.69-53.5-10.93-75.82-.35-3.5-.67-6.81-1-9.9-.13-1.47-.26-2.88-.38-4.24-.6-6.71-1-12-1.26-15.32-.18-2.4-.27-3.72-.27-3.72H414l-.17,4.61L413.23,312l-.06,1.74-.38,10.05-.63,17.11C418.37,365,414.66,401.1,414.66,401.1Z"
+        style={{
+          fill: "rgb(235, 179, 118)",
+          transformOrigin: "405.79px 346.68px",
+        }}
+        id="el3kw4gy1fxq4"
+        className="animable"
+      />
+      <path
+        d="M455.26,399.82l-4.93.93c-9.87-24.67-19.14-56.26-25.17-78.33-.93-3.42-1.79-6.62-2.56-9.52,0-.15-.07-.29-.11-.43-1.52-5.76-2.69-10.35-3.42-13.26l-.87-3.53L436,292.6l1,7.5,1.49,11,.29,2.16,1,7.51,2.71,20.14C452.77,363.61,455.26,399.82,455.26,399.82Z"
+        style={{
+          fill: "rgb(235, 179, 118)",
+          transformOrigin: "436.73px 346.675px",
+        }}
+        id="el81cf07vieeb"
+        className="animable"
+      />
+      <g id="elcal3eagjrv">
+        <path
+          d="M438.54,311.12,422.6,312.9c0-.15-.07-.29-.11-.43-1.52-5.76-2.69-10.35-3.42-13.26l18,.89Z"
+          style={{
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "428.805px 306.055px",
+          }}
+          className="animable"
+          id="el99d0wv79pnp"
+        />
+      </g>
+      <g id="elclve6wp8mml">
+        <path
+          d="M413.79,296.79,413.23,312l-.06,1.74-15.4,1.71c-.13-1.47-.26-2.88-.38-4.24-.6-6.71-1-12-1.26-15.32Z"
+          style={{
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "404.96px 305.67px",
+          }}
+          className="animable"
+          id="elo44jonkzi6l"
+        />
+      </g>
+      <path
+        d="M399.87,417.72A10,10,0,0,1,403,416h0s3.41-3.38,5.06-13.56l4.46-1.17a3.82,3.82,0,0,1,4.06,1.59,2.13,2.13,0,0,1,.28.59,26.13,26.13,0,0,1,.48,3.31,92.15,92.15,0,0,1,.07,11.18h-.81l-.32-7c-.12-2.39-1.95.41-2.47,3s-1.63,5.29-6.85,5.42C400.86,419.45,398.33,419.21,399.87,417.72Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "408.488px 410.271px",
+        }}
+        id="eleos20exna2a"
+        className="animable"
+      />
+      <path
+        d="M416.74,403c.29-2.38.38-6.52.38-6.52l-9.92,1.1s1.2,4.71.21,8.25C412.41,404.46,416.74,403,416.74,403Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "412.16px 401.155px",
+        }}
+        id="elvuf8cdy2jif"
+        className="animable"
+      />
+      <path
+        d="M440.23,417.72a10,10,0,0,1,3.13-1.71h0s3.41-3.38,5.05-13.56l4.47-1.17a3.82,3.82,0,0,1,4.06,1.59,2.13,2.13,0,0,1,.28.59,26.13,26.13,0,0,1,.48,3.31,91.49,91.49,0,0,1,.06,11.18H457l-.32-7c-.12-2.39-1.95.41-2.47,3s-1.63,5.29-6.86,5.42C441.22,419.45,438.69,419.21,440.23,417.72Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "448.846px 410.28px",
+        }}
+        id="eleco7fzmvhem"
+        className="animable"
+      />
+      <path
+        d="M457.09,403c.3-2.38.39-6.52.39-6.52l-9.92,1.1s1.2,4.71.21,8.25C452.77,404.46,457.09,403,457.09,403Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "452.52px 401.155px",
+        }}
+        id="elunn4zqp14wf"
+        className="animable"
+      />
+      <path
+        d="M440.26,306.21l-18.87,2.41-.73.09-3.88-14.22-1,15.24-20.22-1.06c-9-52.87,6.39-65.36,6.39-65.36l27.43,5.52c12.42,21.12,9.47,45.66,9.47,45.66Z"
+        style={{
+          fill: "#F87171",
+          transformOrigin: "416.498px 276.52px",
+        }}
+        id="el19645mx2czaj"
+        className="animable"
+      />
+      <path
+        d="M414.28,177.44c0,2.08-.92,3.76-2,3.76s-2.06-1.68-2.06-3.76.92-3.76,2.06-3.76S414.28,175.36,414.28,177.44Z"
+        style={{
+          fill: "none",
+          stroke: "rgb(38, 50, 56)",
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: "0.5px",
+          transformOrigin: "412.25px 177.44px",
+        }}
+        id="elwmoyxu6zfvq"
+        className="animable"
+      />
+      <path
+        d="M427.83,190a1.37,1.37,0,0,1-.24.18,10.87,10.87,0,0,1-3.83,1.87c-4.05.94-6.82.38-8.63-1.45h0c-2.53-2.75-3.16-7.62-2.8-13.5a22.24,22.24,0,0,1,1.28-6.86s0-.09,0-.11.06-.17.1-.25a8,8,0,0,1,5.9-4.89,16.19,16.19,0,0,1,3.47-.39C434.55,164.51,436.61,183.49,427.83,190Z"
+        style={{
+          fill: "rgb(235, 179, 118)",
+          transformOrigin: "422.75px 178.549px",
+        }}
+        id="elf7j928a554k"
+        className="animable"
+      />
+      <g id="eltliq9k7rmqb">
+        <path
+          d="M427.59,190.21a10.6,10.6,0,0,1-3.83,1.71c-4.05.94-6.82.25-8.63-1.61a11.43,11.43,0,0,0,7.27-.6A6,6,0,0,1,427.59,190.21Z"
+          style={{
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "421.36px 190.839px",
+          }}
+          className="animable"
+          id="el1oe43tnlb6g"
+        />
+      </g>
+      <path
+        d="M428.75,200.56c.71,3.26-3.52,4.59-3.52,4.59-6.91-3-8.19-6.63-8.19-6.63,5.77-3,4.1-11.51,4.1-11.51l1.17.58,8.23,1.61s-2.28,4.38-2.58,5.38c0,0,0,0,0,0C426.4,199.83,428.75,200.56,428.75,200.56Z"
+        style={{
+          fill: "rgb(235, 179, 118)",
+          transformOrigin: "423.79px 196.08px",
+        }}
+        id="elhdsud6z908"
+        className="animable"
+      />
+      <path
+        d="M413.6,170.19s-.63,8,7,11.49c0,0,3.27,8.35,8.08,8.46,6.57.16,12.35-9.17,10.08-18.68C435.79,159.12,417.1,158.12,413.6,170.19Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "426.425px 175.897px",
+        }}
+        id="elodg5lf3sn7g"
+        className="animable"
+      />
+      <path
+        d="M416.72,179.37c0-1.25,1-3.36,3-3.07s3.14,5.27-1.82,6.38C417.15,182.84,416.72,182,416.72,179.37Z"
+        style={{
+          fill: "rgb(235, 179, 118)",
+          transformOrigin: "419.073px 179.486px",
+        }}
+        id="elnmb2w0cp9ib"
+        className="animable"
+      />
+      <path
+        d="M427.59,161.65s-7.66-1.94-11.9,1.15c-4.95,3.6-6.83,7.32-1,13.1,0,0,12.87-4.17,17.15-3.29a45.87,45.87,0,0,1,7.34,2.13C440.11,166.24,431.87,159.91,427.59,161.65Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "425.165px 168.474px",
+        }}
+        id="el7tuu0g0y4i7"
+        className="animable"
+      />
+      <path
+        d="M416.72,177.44s2,9.26-1.14,17.16c0,0,18.2,6.31,24.53,2.88s.53-14.94.26-21.58-3.15-16.45-12.78-14.25S416.72,177.44,416.72,177.44Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "429.318px 179.918px",
+        }}
+        id="eljj6t9h5rze"
+        className="animable"
+      />
+      <line
+        x1={410.17}
+        y1={176.85}
+        x2={417.86}
+        y2={176.85}
+        style={{
+          fill: "none",
+          stroke: "rgb(38, 50, 56)",
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: "0.5px",
+          transformOrigin: "414.015px 176.85px",
+        }}
+        id="el1v91r5zweel"
+        className="animable"
+      />
+      <g id="el5liboe659on">
+        <path
+          d="M421.39,308.62l-.73.09-3.88-14.22s8.32-14.21,5.72-21.61C422.87,273.4,431.83,286.69,421.39,308.62Z"
+          style={{
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "421.605px 290.795px",
+          }}
+          className="animable"
+          id="ely9ls32sbgye"
+        />
+      </g>
+      <path
+        d="M405.81,199.84s9.15-3.26,22.94.72,14.31,9.85,14.31,9.85-8.74,19.81-10.12,42.24L397,251.31S392.71,219.65,405.81,199.84Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "419.694px 225.617px",
+        }}
+        id="elruleweaf1ss"
+        className="animable"
+      />
+      <g id="elo4jigeyl6l">
+        <path
+          d="M443.06,210.41s-8.74,19.81-10.12,42.24L397,251.31a96.44,96.44,0,0,1-.66-11,107.22,107.22,0,0,1,1-16.09c1.2-8.3,3.67-17.16,8.47-24.42,0,0,9.15-3.26,22.94.72S443.06,210.41,443.06,210.41Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "419.695px 225.597px",
+          }}
+          className="animable"
+          id="elnmozqeyfew"
+        />
+      </g>
+      <g id="elr2zmc1pugla">
+        <path
+          d="M405.31,225.61s-1.49,9.12-9,14.74a107.22,107.22,0,0,1,1-16.09Z"
+          style={{
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "400.805px 232.305px",
+          }}
+          className="animable"
+          id="el8vbwvnfv60j"
+        />
+      </g>
+      <path
+        d="M365.6,199.21l-4.53-6.72s-.69-2.92-1.57-3.58-9.58-4.37-10.63-4.35-1,6.78,0,7.93,6.54,3.61,8,3.86.74,0,.74,0l4,8Z"
+        style={{
+          fill: "rgb(235, 179, 118)",
+          transformOrigin: "356.851px 194.455px",
+        }}
+        id="elq6esipv6f9"
+        className="animable"
+      />
+      <path
+        d="M405.81,199.84a196.94,196.94,0,0,0-28,14.46l-14.63-20s-3.94,1.22-5.4,8.08c0,0,7.51,28.61,17.27,31.45s30.28-8.27,30.28-8.27S411.27,210.7,405.81,199.84Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "382.949px 214.297px",
+        }}
+        id="elmi7ypaqgdq"
+        className="animable"
+      />
+      <g id="el5o54g5jofdc">
+        <path
+          d="M405.81,199.84a196.94,196.94,0,0,0-28,14.46l-14.63-20s-3.94,1.22-5.4,8.08c0,0,7.51,28.61,17.27,31.45s30.28-8.27,30.28-8.27S411.27,210.7,405.81,199.84Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.2,
+            isolation: "isolate",
+            transformOrigin: "382.949px 214.297px",
+          }}
+          className="animable"
+          id="elfbn6w15c4to"
+        />
+      </g>
+      <path
+        d="M415.06,198.58s3.19,22.84,13.3,23.76,14.64-16,12.93-18S426.55,198.43,415.06,198.58Z"
+        style={{
+          fill: "rgb(38, 50, 56)",
+          transformOrigin: "428.352px 210.476px",
+        }}
+        id="el5mb9g8ruiq5"
+        className="animable"
+      />
+      <g id="el1c33pu20ydl">
+        <path
+          d="M415.06,198.58s3.19,22.84,13.3,23.76,14.64-16,12.93-18S426.55,198.43,415.06,198.58Z"
+          style={{
+            fill: "rgb(255, 255, 255)",
+            opacity: 0.3,
+            isolation: "isolate",
+            transformOrigin: "428.352px 210.476px",
+          }}
+          className="animable"
+          id="elnjjvzhab6zg"
+        />
+      </g>
+    </g>
+    <g
+      id="freepik--character-1--inject-80"
+      className="animable animator-active"
+      style={{
+        transformOrigin: "94.8014px 277.892px",
+      }}
+    >
+      <g
+        id="freepik--group--inject-80"
+        className="animable"
+        style={{
+          transformOrigin: "94.8014px 277.892px",
+        }}
+      >
+        <polygon
+          points="55.36 408.67 62.77 408.67 63.38 391.51 55.97 391.51 55.36 408.67"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "59.37px 400.09px",
+          }}
+          id="elmyno6hyxvbf"
+          className="animable"
+        />
+        <path
+          d="M63.79,407.81h-9a.63.63,0,0,0-.63.51l-1.46,6.59a1.09,1.09,0,0,0,.84,1.3l.24,0c2.91-.05,5-.23,8.68-.23,2.26,0,9,.24,12.16.24s3.51-3.07,2.24-3.35c-5.71-1.25-10-3-11.83-4.61A1.8,1.8,0,0,0,63.79,407.81Z"
+          style={{
+            fill: "rgb(38, 50, 56)",
+            transformOrigin: "65.1109px 412.015px",
+          }}
+          id="elvn6r1dugak"
+          className="animable"
+        />
+        <path
+          d="M64.3,408.84a.18.18,0,0,1-.13-.15.16.16,0,0,1,.08-.17c.27-.17,2.66-1.64,3.48-1.22a.52.52,0,0,1,.3.49,1,1,0,0,1-.37.94,2.15,2.15,0,0,1-1.42.38A9.16,9.16,0,0,1,64.3,408.84Zm.51-.25a3.6,3.6,0,0,0,2.64-.13.72.72,0,0,0,.23-.63c0-.14-.06-.21-.11-.21a.46.46,0,0,0-.23-.05A7.25,7.25,0,0,0,64.81,408.59Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "66.1046px 408.172px",
+          }}
+          id="el8pxdh4ssmts"
+          className="animable"
+        />
+        <path
+          d="M64.25,408.87a.18.18,0,0,1-.08-.16c0-.1.19-2.23,1-2.93a.9.9,0,0,1,.74-.22.59.59,0,0,1,.57.46c.15.78-1.33,2.41-2.1,2.83h-.08ZM65.44,406a4.16,4.16,0,0,0-.87,2.32c.76-.58,1.7-1.81,1.61-2.29,0,0,0-.18-.26-.18h-.08A.59.59,0,0,0,65.44,406Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "65.3301px 407.21px",
+          }}
+          id="el41a6ppwveom"
+          className="animable"
+        />
+        <g id="elvvwdpxocwr">
+          <polygon
+            points="55.97 391.52 63.38 391.52 63.06 400.37 55.65 400.37 55.97 391.52"
+            style={{
+              opacity: 0.2,
+              isolation: "isolate",
+              transformOrigin: "59.515px 395.945px",
+            }}
+            className="animable"
+            id="elldc14pfnhtc"
+          />
+        </g>
+        <polygon
+          points="93.49 409.22 101.14 410.03 102.57 393.55 94.93 392.74 93.49 409.22"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "98.03px 401.385px",
+          }}
+          id="elzp0tcyqkhm"
+          className="animable"
+        />
+        <path
+          d="M101.94,407.57H93a.65.65,0,0,0-.63.51l-1.46,6.6A1.08,1.08,0,0,0,91.7,416l.24,0c2.91-.05,5-.23,8.69-.23,2.25,0,9,.23,12.15.23s3.51-3.07,2.24-3.35c-5.71-1.24-10-3-11.83-4.61A1.85,1.85,0,0,0,101.94,407.57Z"
+          style={{
+            fill: "rgb(38, 50, 56)",
+            transformOrigin: "103.29px 411.785px",
+          }}
+          id="elntg1frib2t"
+          className="animable"
+        />
+        <path
+          d="M102.45,408.6a.18.18,0,0,1-.13-.15.15.15,0,0,1,.09-.17c.26-.17,2.65-1.64,3.47-1.21a.5.5,0,0,1,.3.48,1.06,1.06,0,0,1-.36.95,2.25,2.25,0,0,1-1.43.37A9.16,9.16,0,0,1,102.45,408.6Zm.51-.24a3.6,3.6,0,0,0,2.64-.14.71.71,0,0,0,.23-.63c0-.14-.06-.2-.11-.2a.36.36,0,0,0-.22-.05A7,7,0,0,0,103,408.36Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "104.253px 407.935px",
+          }}
+          id="elronev2bgh4"
+          className="animable"
+        />
+        <path
+          d="M102.41,408.64a.19.19,0,0,1-.09-.16c0-.11.19-2.23,1.05-2.93a1,1,0,0,1,.74-.23.58.58,0,0,1,.57.46c.15.79-1.33,2.42-2.1,2.83h-.08Zm1.18-2.88a4.13,4.13,0,0,0-.87,2.31c.76-.57,1.7-1.81,1.61-2.29,0,0,0-.18-.26-.18H104A.65.65,0,0,0,103.59,405.76Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "103.505px 406.978px",
+          }}
+          id="elcqhqfvm161a"
+          className="animable"
+        />
+        <g id="elm8ecy2aimd">
+          <polygon
+            points="94.93 392.74 102.57 393.55 101.82 402.05 94.18 401.24 94.93 392.74"
+            style={{
+              opacity: 0.2,
+              isolation: "isolate",
+              transformOrigin: "98.375px 397.395px",
+            }}
+            className="animable"
+            id="elr92z42b5fio"
+          />
+        </g>
+        <path
+          d="M59,241.05H98.33c3.73,20.41,15.43,92.62,7,157l-13.31-1.65s1.23-85.41-10.51-117c-1.35,16.9-3,34.88-4.35,44.45-3.42,23.55-10.74,75-10.74,75H52.91s2.77-49.26,4.05-72.4C58.36,301.3,59,246.21,59,241.05Z"
+          style={{
+            fill: "rgb(38, 50, 56)",
+            transformOrigin: "80.614px 319.95px",
+          }}
+          id="elzk1fb9tuqbp"
+          className="animable"
+        />
+        <polygon
+          points="106.89 401.11 90.42 398.66 90.93 394.1 108.06 396.35 106.89 401.11"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "99.24px 397.605px",
+          }}
+          id="elfnbs7vjnge"
+          className="animable"
+        />
+        <polygon
+          points="68.09 398.94 52.11 398.94 52.11 394.17 68.69 393.86 68.09 398.94"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "60.4px 396.4px",
+          }}
+          id="elji9xbfv9frr"
+          className="animable"
+        />
+        <g id="el2s6v99el5wt">
+          <path
+            d="M81.55,279.37a106.24,106.24,0,0,1,4.39,17c1.1-15-3.3-31-3.3-31Z"
+            style={{
+              opacity: 0.2,
+              isolation: "isolate",
+              transformOrigin: "83.8333px 280.87px",
+            }}
+            className="animable"
+            id="eltpfmcooalqp"
+          />
+        </g>
+        <path
+          d="M57.91,247.89l-.9,4.75s27.51,3.56,44.62,3.46l-.6-3.26Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "79.32px 251.996px",
+          }}
+          id="elb85yu536e5b"
+          className="animable"
+        />
+        <path
+          d="M113.74,206.76s9.51,30,16,32,23-22.79,23-22.79,14.83-.14,15.49-1.15-3.85-11.46-4.93-11.47-14,4.85-14.49,5.67-15.32,15-16,14.58-6.32-18.25-6.32-18.25Z"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "141.018px 221.112px",
+          }}
+          id="el1wahk56scyq"
+          className="animable"
+        />
+        <path
+          d="M154.7,214.35a3.58,3.58,0,0,0,.35-.09l-.17-.11A1.71,1.71,0,0,1,154.7,214.35Z"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "154.875px 214.25px",
+          }}
+          id="elkmswm28c3ph"
+          className="animable"
+        />
+        <path
+          d="M108.34,203.3l1.16,2.13,5.41,10,1.13,2.07,15.19-5.28s-6.32-23.58-8.51-26Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "119.785px 201.86px",
+          }}
+          id="el8a91zdqfvwc"
+          className="animable"
+        />
+        <g id="el8twl66hnakb">
+          <path
+            d="M108.34,203.3l1.16,2.13,5.41,10,1.13,2.07,15.19-5.28s-6.32-23.58-8.51-26Z"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              opacity: 0.4,
+              isolation: "isolate",
+              transformOrigin: "119.785px 201.86px",
+            }}
+            className="animable"
+            id="elj4sj4c573y"
+          />
+        </g>
+        <g id="el9rxiocbu0el">
+          <path
+            d="M109.5,205.43l5.41,10c3.35-6.57,2.38-15.57,2.38-15.57Z"
+            style={{
+              opacity: 0.2,
+              isolation: "isolate",
+              transformOrigin: "113.46px 207.645px",
+            }}
+            className="animable"
+            id="el0rj4i6rz6eho"
+          />
+        </g>
+        <path
+          d="M122.72,186.23a32.24,32.24,0,0,0-22.88-11.1c-14.88-.7-19.56.78-25,5.64C66.89,187.87,57,249,57,249a138.07,138.07,0,0,0,44.62,4.85s.18-17,5.55-28.41A317.08,317.08,0,0,0,122.72,186.23Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "89.86px 214.512px",
+          }}
+          id="elf3omfp2zrkd"
+          className="animable"
+        />
+        <g id="elwmyu4qvvdp">
+          <path
+            d="M57,249a138.23,138.23,0,0,0,44.62,4.86s0-2.1.29-5.31c.12-1.52.3-3.3.55-5.22s.61-4.11,1-6.29c.24-1.17.52-2.35.82-3.52a46.86,46.86,0,0,1,2.84-8.09c.66-1.4,1.3-2.79,1.92-4.15,1.07-2.38,2.09-4.69,3-6.9,2-4.65,3.7-8.9,5.12-12.62,1-2.67,1.9-5.06,2.63-7.11.81-2.29,1.45-4.17,1.92-5.57.61-1.85.91-2.86.91-2.86a19.58,19.58,0,0,0-1.6-1.77,32.54,32.54,0,0,0-20.78-9.3l-.5,0c-11.34-.53-16.75.2-21.09,2.73a23.93,23.93,0,0,0-3.91,2.92A13.28,13.28,0,0,0,72.12,185a92,92,0,0,0-4.54,13.26l-.66,2.43c-1,3.71-1.94,7.66-2.84,11.66-.26,1.14-.51,2.28-.76,3.41-.37,1.74-.74,3.47-1.09,5.18-.9,4.31-1.71,8.49-2.42,12.25-1,5.4-1.81,9.92-2.29,12.73C57.19,247.9,57,249,57,249Zm43.7-73.3a29.38,29.38,0,0,1,3,.23c4,.54,10.15,3.75,10,5.27s-2.49,5.4-8.47,4.46a14.88,14.88,0,0,1-5.8-2.42c-3.3-2.18-5.7-5.13-5.94-6.09C93.19,176,97.07,175.61,100.71,175.72Z"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              opacity: 0.4,
+              isolation: "isolate",
+              transformOrigin: "89.81px 214.527px",
+            }}
+            className="animable"
+            id="elnura8b2b5x"
+          />
+        </g>
+        <path
+          d="M87.88,196.08S80,215.15,78.38,231l21.31,2.72s9.56-25.77,11.54-33.83C111.23,199.87,94.21,198.17,87.88,196.08Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "94.805px 214.9px",
+          }}
+          id="eloh25s50opa"
+          className="animable"
+        />
+        <g id="elkk4m111312k">
+          <polygon
+            points="107.07 200.62 110.03 200.91 107.86 202.59 107.07 200.62"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              opacity: 0.4,
+              isolation: "isolate",
+              transformOrigin: "108.55px 201.605px",
+            }}
+            className="animable"
+            id="elnnu1y4le6wo"
+          />
+        </g>
+        <path
+          d="M95.47,177.2c1.61,4.6,7.6,6.7,10.74,7a5.34,5.34,0,0,0,5.7-3.08s-3.59-1.79-3.23-3.8a9.18,9.18,0,0,1,1.48-3.42,18.08,18.08,0,0,1,1.22-1.69l-5.75-12.33C104.35,165.22,100.42,175.48,95.47,177.2Z"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "103.69px 172.073px",
+          }}
+          id="el19hpbpncx6w"
+          className="animable"
+        />
+        <g id="elix3lzv9tfdq">
+          <path
+            d="M105.4,165.57c-2.74,6,1.13,10.13,3.28,11.71a9.18,9.18,0,0,1,1.48-3.42Z"
+            style={{
+              opacity: 0.2,
+              isolation: "isolate",
+              transformOrigin: "107.307px 171.425px",
+            }}
+            className="animable"
+            id="elue8g45vtdxa"
+          />
+        </g>
+        <path
+          d="M124.68,149.56s1.84,10.16-3.46,14.23-5.84-14.91-5.84-14.91Z"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "120.185px 156.621px",
+          }}
+          id="elvs8vhdocfkj"
+          className="animable"
+        />
+        <g id="el4ytzjrpvtqi">
+          <path
+            d="M124.68,149.56s1.84,10.16-3.46,14.23-5.84-14.91-5.84-14.91Z"
+            style={{
+              opacity: 0.4,
+              isolation: "isolate",
+              transformOrigin: "120.185px 156.621px",
+            }}
+            className="animable"
+            id="el10yrjwh04nbp"
+          />
+        </g>
+        <path
+          d="M105.73,172.34a9.26,9.26,0,0,0,10.73,3.29,10.32,10.32,0,0,0,5.75-5c.17-.31.32-.65.47-1,2.48-6.31,3-21.71-3.68-21.14-5.52.47-10.92-1.23-13.74,3.54a10,10,0,0,0-1.38,4.46C103.28,163.85,102.58,168.12,105.73,172.34Z"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "113.872px 162.339px",
+          }}
+          id="elany4mj0yd1v"
+          className="animable"
+        />
+        <path
+          d="M114.61,160.13c-.12.58.16,1.11.55,1.17s.77-.39.86-1-.17-1.11-.55-1.16S114.7,159.53,114.61,160.13Z"
+          style={{
+            fill: "rgb(38, 50, 56)",
+            transformOrigin: "115.31px 160.221px",
+          }}
+          id="el7znn2aj7cdb"
+          className="animable"
+        />
+        <path
+          d="M121.3,161.08c-.12.58.17,1.11.55,1.17s.77-.39.85-1-.16-1.11-.55-1.17S121.38,160.52,121.3,161.08Z"
+          style={{
+            fill: "rgb(38, 50, 56)",
+            transformOrigin: "121.994px 161.165px",
+          }}
+          id="el71uaajosowi"
+          className="animable"
+        />
+        <path
+          d="M119.13,161.07a21.45,21.45,0,0,0,2.11,5.46,3.47,3.47,0,0,1-2.92.13Z"
+          style={{
+            fill: "rgb(162, 78, 63)",
+            transformOrigin: "119.78px 163.995px",
+          }}
+          id="elvq8jgj0e4k"
+          className="animable"
+        />
+        <path
+          d="M112.85,157.67a.35.35,0,0,0,.35-.09,2.84,2.84,0,0,1,2.39-.84.36.36,0,0,0,.42-.27.34.34,0,0,0-.27-.41h0a3.51,3.51,0,0,0-3,1,.36.36,0,0,0,0,.5h0A.6.6,0,0,0,112.85,157.67Z"
+          style={{
+            fill: "rgb(38, 50, 56)",
+            transformOrigin: "114.329px 156.854px",
+          }}
+          id="el6cv8g0jj9br"
+          className="animable"
+        />
+        <path
+          d="M124.5,159.18a.28.28,0,0,0,.2,0,.33.33,0,0,0,.23-.43h0a3.47,3.47,0,0,0-2.22-2.3.34.34,0,0,0-.43.24h0a.35.35,0,0,0,.24.43h0a2.84,2.84,0,0,1,1.74,1.85A.34.34,0,0,0,124.5,159.18Z"
+          style={{
+            fill: "rgb(38, 50, 56)",
+            transformOrigin: "123.608px 157.817px",
+          }}
+          id="eloq7vxn30j0j"
+          className="animable"
+        />
+        <path
+          d="M113.68,166.92s1.23,2.64,3.74,2.54"
+          style={{
+            fill: "none",
+            stroke: "rgb(38, 50, 56)",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "0.5px",
+            transformOrigin: "115.55px 168.191px",
+          }}
+          id="elfpoogv8rmpk"
+          className="animable"
+        />
+        <path
+          d="M110.49,148.23l.1,3.26a2.4,2.4,0,0,0-1.49,2.91c.78,2.8-1.15,6.86-3.38,8.34,0,0,0-1.18-1-1s-1.31,6.32.34,9.41c0,0-3.53-3.25-4.58-9.82-1-6.07-.81-9.92,0-12.83Z"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "105.195px 159.69px",
+          }}
+          id="el5khkjxb4cix"
+          className="animable"
+        />
+        <g id="elv1cfoev1obd">
+          <path
+            d="M110.49,148.23l.1,3.26a2.4,2.4,0,0,0-1.49,2.91c.78,2.8-1.15,6.86-3.38,8.34,0,0,0-1.18-1-1s-1.31,6.32.34,9.41c0,0-3.53-3.25-4.58-9.82-1-6.07-.81-9.92,0-12.83Z"
+            style={{
+              opacity: 0.4,
+              isolation: "isolate",
+              transformOrigin: "105.195px 159.69px",
+            }}
+            className="animable"
+            id="elxq47cwif3c"
+          />
+        </g>
+        <path
+          d="M99.92,152.14a33.88,33.88,0,0,0,10.67-.65c10.07-2,14.36,1.7,14.36,1.7a6.33,6.33,0,0,0,2.09-5c-.29-2.9-4.32-3.39-4.32-3.39s-1.21-3.27-3.88-4.26-5.35,1.49-5.35,1.49-3.33-3.22-7.21-2.3a5.82,5.82,0,0,0-4.65,5.66s-4.55.46-4.45,2.8S99.92,152.14,99.92,152.14Z"
+          style={{
+            fill: "rgb(38, 50, 56)",
+            transformOrigin: "112.113px 146.377px",
+          }}
+          id="elynce101l66m"
+          className="animable"
+        />
+        <ellipse
+          cx={115.39}
+          cy={160.62}
+          rx={3.27}
+          ry={3.77}
+          style={{
+            fill: "none",
+            stroke: "rgb(38, 50, 56)",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "0.5px",
+            transformOrigin: "115.39px 160.62px",
+          }}
+          id="elywwm2udrg0d"
+          className="animable"
+        />
+        <path
+          d="M126.88,161.18a3.3,3.3,0,1,1-3.27-3.77A3.55,3.55,0,0,1,126.88,161.18Z"
+          style={{
+            fill: "none",
+            stroke: "rgb(38, 50, 56)",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "0.5px",
+            transformOrigin: "123.601px 160.71px",
+          }}
+          id="elgsqqgc4cvc8"
+          className="animable"
+        />
+        <path
+          d="M118.65,161.07s1.06-.66,1.69.11"
+          style={{
+            fill: "none",
+            stroke: "rgb(38, 50, 56)",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "0.5px",
+            transformOrigin: "119.495px 160.993px",
+          }}
+          id="el9htpi44kfpd"
+          className="animable"
+        />
+        <path
+          d="M112.12,160.62l-5.73-.77a2.86,2.86,0,0,0-2.11.57l-.25.2"
+          style={{
+            fill: "none",
+            stroke: "rgb(38, 50, 56)",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: "0.5px",
+            transformOrigin: "108.075px 160.223px",
+          }}
+          id="elp9gpeog8pbf"
+          className="animable"
+        />
+        <path
+          d="M99.86,162a7,7,0,0,0,3.47,4.06c2.19,1.09,3.75-.75,3.53-3.06-.2-2.06-1.57-5.16-4-5.28A3.12,3.12,0,0,0,99.86,162Z"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "103.258px 162.05px",
+          }}
+          id="el3lqecnq294l"
+          className="animable"
+        />
+        <g id="elqj4d8uam9vs">
+          <path
+            d="M63.32,215.79c9.44-3.92,16.9-20.11,16.9-20.11l-5.36-3.24-7.28,5.85-.66,2.43c-1,3.71-1.94,7.66-2.84,11.66C63.82,213.52,63.57,214.66,63.32,215.79Z"
+            style={{
+              opacity: 0.2,
+              isolation: "isolate",
+              transformOrigin: "71.77px 204.115px",
+            }}
+            className="animable"
+            id="elzhihdx3nnps"
+          />
+        </g>
+        <polygon
+          points="115.31 217.51 131.59 211.53 132.06 212.91 115.77 218.71 115.31 217.51"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "123.685px 215.12px",
+          }}
+          id="elwfms7sl195k"
+          className="animable"
+        />
+        <g id="ely4ffoowvtv9">
+          <rect
+            x={23.32}
+            y={254.74}
+            width={47.78}
+            height={29.47}
+            style={{
+              fill: "#F87171",
+              transformOrigin: "47.21px 269.475px",
+              transform: "rotate(9.01deg)",
+            }}
+            className="animable"
+            id="elnq6ngxu91a"
+          />
+        </g>
+        <polyline
+          points="42.63 262.26 33.04 267.23 40.62 274.92"
+          style={{
+            fill: "none",
+            stroke: "rgb(255, 255, 255)",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: 2,
+            transformOrigin: "37.835px 268.59px",
+          }}
+          id="eloi0131ujurs"
+          className="animable"
+        />
+        <polyline
+          points="51.79 276.69 61.37 271.72 53.8 264.03"
+          style={{
+            fill: "none",
+            stroke: "rgb(255, 255, 255)",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: 2,
+            transformOrigin: "56.58px 270.36px",
+          }}
+          id="elkyx70nc1il"
+          className="animable"
+        />
+        <line
+          x1={43.96}
+          y1={275.45}
+          x2={50.46}
+          y2={263.5}
+          style={{
+            fill: "none",
+            stroke: "rgb(255, 255, 255)",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeWidth: 2,
+            transformOrigin: "47.21px 269.475px",
+          }}
+          id="el1dvsu2ygyw1h"
+          className="animable"
+        />
+        <path
+          d="M69.21,183.38S51.42,201.23,49,204.7s-7.06,41.94-7.06,41.94-1,.34-1.06,1.17-.16,11.63,0,12.13,8.34,5.55,9.55,4.35,2.89-13.43,2.89-13.43L49,246.64s5-28.33,8.17-32.92,16.09-14.41,16.09-14.41Z"
+          style={{
+            fill: "rgb(185, 121, 100)",
+            transformOrigin: "57.0268px 223.927px",
+          }}
+          id="elcugh61b3nrf"
+          className="animable"
+        />
+        <path
+          d="M82.88,176.19c2.59,5.49.62,17.05-4.16,21.13a140,140,0,0,1-16,11.47L54,197.36s9.28-9.06,14.9-14.28A25.39,25.39,0,0,1,82.88,176.19Z"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "69.0135px 192.49px",
+          }}
+          id="elklj92r61ibm"
+          className="animable"
+        />
+        <g id="elw0wjkvhb3f8">
+          <path
+            d="M82.88,176.19c2.59,5.49.62,17.05-4.16,21.13a140,140,0,0,1-16,11.47L54,197.36s9.28-9.06,14.9-14.28A25.39,25.39,0,0,1,82.88,176.19Z"
+            style={{
+              fill: "rgb(255, 255, 255)",
+              opacity: 0.4,
+              isolation: "isolate",
+              transformOrigin: "69.0135px 192.49px",
+            }}
+            className="animable"
+            id="el6rn4z1v9y0g"
+          />
+        </g>
+        <polygon
+          points="54 196.63 52.92 198.1 62.03 210.01 63.32 209.09 54 196.63"
+          style={{
+            fill: "#F87171",
+            transformOrigin: "58.12px 203.32px",
+          }}
+          id="ellb72zgmvyiq"
+          className="animable"
+        />
+      </g>
+    </g>
+    <defs>
+      <filter id="active" height="200%">
+        <feMorphology
+          in="SourceAlpha"
+          result="DILATED"
+          operator="dilate"
+          radius={2}
+        />
+        <feFlood floodColor="#32DFEC" floodOpacity={1} result="PINK" />
+        <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE" />
+        <feMerge>
+          <feMergeNode in="OUTLINE" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+      <filter id="hover" height="200%">
+        <feMorphology
+          in="SourceAlpha"
+          result="DILATED"
+          operator="dilate"
+          radius={2}
+        />
+        <feFlood floodColor="#ff0000" floodOpacity={0.5} result="PINK" />
+        <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE" />
+        <feMerge>
+          <feMergeNode in="OUTLINE" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+        <feColorMatrix
+          type="matrix"
+          values="0   0   0   0   0                0   1   0   0   0                0   0   0   0   0                0   0   0   1   0 "
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+export default WebsiteDevelopmentIllustration;

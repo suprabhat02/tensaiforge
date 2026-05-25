@@ -9,6 +9,7 @@ type Card = {
   content: React.ReactNode;
   className: string;
   thumbnail: string;
+  title?: string;
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
@@ -69,7 +70,7 @@ const ImageComponent = ({ card }: { card: Card }) => {
       className={cn(
         "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
       )}
-      alt="thumbnail"
+      alt={card.title ?? "Project thumbnail"}
     />
   );
 };
