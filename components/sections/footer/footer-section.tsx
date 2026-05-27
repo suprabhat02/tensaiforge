@@ -1,6 +1,15 @@
+import Link from "next/link";
 import { Mail, Phone } from "@/lib/animated-icons";
 import { SITE } from "@/lib/constants";
+import { SERVICE_PAGES } from "@/lib/service-pages";
+import { BLOG_POSTS } from "@/lib/blog-posts";
 import { TensaiForgeLogo } from "@/components/ui/tensaiforge-logo";
+
+const BLOG_FOOTER = BLOG_POSTS.map((p) => ({
+  href: `/blog/${p.slug}/`,
+  // Short label: strip leading "How Much Does" / year suffixes for brevity
+  label: p.relatedServiceTitle,
+}));
 
 export function FooterSection() {
   return (
@@ -12,31 +21,22 @@ export function FooterSection() {
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-red-400/50 to-transparent" />
 
       <div className="mx-auto max-w-screen-xl">
-        {/* Brand + contact grid */}
-        <div className="mb-12 flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        {/* Main grid */}
+        <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
-          <div className="max-w-sm">
-            <div className="inline-flex items-center gap-2">
-              <TensaiForgeLogo className="h-10 w-auto" />
-            </div>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <TensaiForgeLogo className="h-9 w-auto" />
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Engineering intelligent systems for companies that refuse to be
               ordinary.
             </p>
-          </div>
-
-          {/* Contact details */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-              Contact Us
-            </h3>
-            <ul className="space-y-3">
+            <ul className="mt-5 space-y-2.5">
               <li>
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  className="flex items-center gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  <Mail size={15} className="shrink-0 text-red-400" />
+                  <Mail size={14} className="shrink-0 text-red-400" />
                   {SITE.email}
                 </a>
               </li>
@@ -44,11 +44,82 @@ export function FooterSection() {
                 <li key={num}>
                   <a
                     href={`tel:${num.replace(/[^+\d]/g, "")}`}
-                    className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="flex items-center gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    <Phone size={15} className="shrink-0 text-red-400" />
+                    <Phone size={14} className="shrink-0 text-red-400" />
                     {num}
                   </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Services
+            </p>
+            <ul className="space-y-2.5">
+              {SERVICE_PAGES.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    href={`/services/${s.slug}/`}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Blog */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Blog
+            </p>
+            <ul className="space-y-2.5">
+              {BLOG_FOOTER.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/blog/"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-red-400 transition-colors hover:text-red-300"
+                >
+                  All posts →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Company
+            </p>
+            <ul className="space-y-2.5">
+              {[
+                { label: "Work", href: "/#projects" },
+                { label: "Process", href: "/#process" },
+                { label: "Why Us", href: "/#why-us" },
+                { label: "Testimonials", href: "/#testimonials" },
+                { label: "Get a Quote", href: "/#contact" },
+              ].map(({ label, href }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>

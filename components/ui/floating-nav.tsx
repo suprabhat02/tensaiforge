@@ -8,6 +8,7 @@ import { Menu, X } from "@/lib/animated-icons";
 import { ChevronDown } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/constants";
 import { SERVICE_PAGES } from "@/lib/service-pages";
+import { BLOG_POSTS } from "@/lib/blog-posts";
 import { FADE_UP } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 import { TensaiForgeLogo } from "./tensaiforge-logo";
@@ -18,25 +19,43 @@ const SERVICE_NAV = SERVICE_PAGES.map((s) => ({
   href: `/services/${s.slug}/`,
 }));
 
+// Blog items for the dropdown
+const BLOG_NAV = BLOG_POSTS.map((p) => ({
+  label: p.relatedServiceTitle,
+  href: `/blog/${p.slug}/`,
+}));
+
 export function FloatingNav() {
   const pathname = usePathname();
   const isHome = pathname === "/" || pathname === "";
   const isServicePage = pathname.startsWith("/services/");
+  const isBlogPage = pathname.startsWith("/blog");
 
   // Extract current service slug for active detection
   const currentServiceSlug = isServicePage
     ? pathname.replace("/services/", "").replace(/\/$/, "")
     : null;
 
+  const currentBlogSlug = isBlogPage
+    ? pathname.replace("/blog/", "").replace(/\/$/, "")
+    : null;
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [blogOpen, setBlogOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileBlogOpen, setMobileBlogOpen] = useState(false);
   const servicesTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const blogTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const servicesButtonRef = useRef<HTMLDivElement>(null);
+  const blogButtonRef = useRef<HTMLDivElement>(null);
   const [dropdownAlign, setDropdownAlign] = useState<
+    "center" | "left" | "right"
+  >("center");
+  const [blogDropdownAlign, setBlogDropdownAlign] = useState<
     "center" | "left" | "right"
   >("center");
 
@@ -194,9 +213,38 @@ export function FloatingNav() {
     }
   }, [servicesOpen]);
 
+  // ── Blog dropdown auto-alignment ────────────────────────────
+  useEffect(() => {
+    if (!blogOpen || !blogButtonRef.current) return;
+
+    const rect = blogButtonRef.current.getBoundingClientRect();
+    const viewportWidth = globalThis.innerWidth;
+    const dropdownWidth = 260;
+
+    const centerLeft = rect.left + rect.width / 2 - dropdownWidth / 2;
+    const centerRight = centerLeft + dropdownWidth;
+
+    if (centerLeft < 16) {
+      setBlogDropdownAlign("left");
+    } else if (centerRight > viewportWidth - 16) {
+      setBlogDropdownAlign("right");
+    } else {
+      setBlogDropdownAlign("center");
+    }
+  }, [blogOpen]);
+
   let dropdownPositionClass = "left-1/2 -translate-x-1/2";
   if (dropdownAlign === "left") dropdownPositionClass = "left-0";
   else if (dropdownAlign === "right") dropdownPositionClass = "right-0";
+
+  let blogDropdownPositionClass = "left-1/2 -translate-x-1/2";
+  if (blogDropdownAlign === "left") blogDropdownPositionClass = "left-0";
+  else if (blogDropdownAlign === "right") blogDropdownPositionClass = "right-0";
+
+  const isBlogLinkActive = (href: string) => {
+    if (!currentBlogSlug) return false;
+    return href.includes(currentBlogSlug);
+  };
 
   return (
     <>
@@ -328,6 +376,84 @@ export function FloatingNav() {
                 </Link>
               );
             })}
+
+            {/* Blog dropdown */}
+            <div
+              ref={blogButtonRef}
+              className="relative"
+              onMouseEnter={() => {
+                clearTimeout(blogTimeout.current);
+                setBlogOpen(true);
+              }}
+              onMouseLeave={() => {
+                blogTimeout.current = setTimeout(() => setBlogOpen(false), 150);
+              }}
+            >
+              <Link
+                href="/blog/"
+                aria-current={isBlogPage ? "page" : undefined}
+                aria-expanded={blogOpen}
+                className={cn(
+                  "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-red-400",
+                  isBlogPage
+                    ? "bg-white/[0.12] text-white"
+                    : "text-neutral-300 hover:bg-white/[0.06] hover:text-white",
+                )}
+              >
+                Blog
+                <ChevronDown
+                  size={14}
+                  className={cn(
+                    "transition-transform duration-200",
+                    blogOpen && "rotate-180",
+                  )}
+                />
+              </Link>
+
+              <AnimatePresence>
+                {blogOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.15 }}
+                    className={cn(
+                      "absolute top-full z-50 mt-2 w-[260px] overflow-hidden rounded-xl border border-white/[0.12] bg-neutral-950/90 shadow-2xl backdrop-blur-2xl",
+                      blogDropdownPositionClass,
+                    )}
+                  >
+                    <div className="p-2">
+                      {BLOG_NAV.map((post) => {
+                        const postActive = isBlogLinkActive(post.href);
+                        return (
+                          <Link
+                            key={post.href}
+                            href={post.href}
+                            className={cn(
+                              "block rounded-lg px-3 py-2.5 text-sm transition-colors",
+                              postActive
+                                ? "bg-red-500/10 font-medium text-red-400"
+                                : "text-neutral-300 hover:bg-white/[0.08] hover:text-white",
+                            )}
+                            onClick={() => setBlogOpen(false)}
+                          >
+                            {post.label}
+                          </Link>
+                        );
+                      })}
+                      <div className="my-1 border-t border-white/[0.08]" />
+                      <Link
+                        href="/blog/"
+                        className="block rounded-lg px-3 py-2.5 text-sm font-medium text-red-400 transition-colors hover:bg-red-400/10"
+                        onClick={() => setBlogOpen(false)}
+                      >
+                        All Posts
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Desktop CTA + Mobile hamburger */}
@@ -474,6 +600,69 @@ export function FloatingNav() {
                   </motion.div>
                 );
               })}
+
+              {/* Blog item in mobile menu */}
+              <motion.div variants={FADE_UP}>
+                <div className="flex flex-col items-center">
+                  <button
+                    type="button"
+                    onClick={() => setMobileBlogOpen(!mobileBlogOpen)}
+                    className={cn(
+                      "inline-flex items-center gap-2 font-display text-3xl font-bold transition-colors",
+                      isBlogPage
+                        ? "text-red-400"
+                        : "text-white hover:text-red-400",
+                    )}
+                  >
+                    Blog
+                    <ChevronDown
+                      size={22}
+                      className={cn(
+                        "transition-transform duration-200",
+                        mobileBlogOpen && "rotate-180",
+                      )}
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {mobileBlogOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="mt-3 flex flex-col items-center gap-2 overflow-hidden"
+                      >
+                        {BLOG_NAV.map((post) => {
+                          const postActive = isBlogLinkActive(post.href);
+                          return (
+                            <Link
+                              key={post.href}
+                              href={post.href}
+                              onClick={() => setMobileOpen(false)}
+                              className={cn(
+                                "text-lg transition-colors",
+                                postActive
+                                  ? "font-medium text-red-400"
+                                  : "text-neutral-400 hover:text-red-400",
+                              )}
+                            >
+                              {post.label}
+                            </Link>
+                          );
+                        })}
+                        <Link
+                          href="/blog/"
+                          onClick={() => setMobileOpen(false)}
+                          className="mt-1 text-sm font-medium text-red-400 hover:text-red-300"
+                        >
+                          All Posts →
+                        </Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </motion.div>
+
               <motion.div variants={FADE_UP} className="mt-4">
                 <Link
                   href={resolveHref("#contact")}
