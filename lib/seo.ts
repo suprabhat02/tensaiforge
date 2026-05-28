@@ -195,6 +195,50 @@ export function generateFAQSchema() {
   } as const;
 }
 
+// ── LocalBusiness Schema — boosts local/branded search & Knowledge Panel ──────
+export function generateLocalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${SITE.url}/#business`,
+    name: SITE.name,
+    description: SITE.description,
+    url: SITE.url,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/tensaiforgelogo.svg`,
+      width: 201,
+      height: 123,
+    },
+    image: `${SITE.url}/tensaiforgelogo.svg`,
+    email: SITE.email,
+    telephone: SITE.phone[0],
+    priceRange: "$$",
+    currenciesAccepted: "USD, INR",
+    paymentAccepted: "Bank Transfer, Crypto, Card",
+    // Remote-first studio — serves worldwide
+    areaServed: {
+      "@type": "Place",
+      name: "Worldwide",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://twitter.com/tensaiforge",
+      "https://github.com/tensaiforge",
+      "https://linkedin.com/company/tensaiforge",
+    ],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  } as const;
+}
+
 // ── ProfessionalService Schema — enables Knowledge Panel for branded searches ─
 export function generateProfessionalServiceSchema() {
   return {

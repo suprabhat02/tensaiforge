@@ -7,6 +7,7 @@ import {
   generateWebsiteSchema,
   generateServiceListSchema,
   generateFAQSchema,
+  generateLocalBusinessSchema,
   generateProfessionalServiceSchema,
 } from "@/lib/seo";
 import "@/styles/globals.css";
@@ -92,6 +93,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateProfessionalServiceSchema()),
+          }}
+        />
+        {/* LocalBusiness schema — boosts branded search & Google Maps knowledge panel */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateLocalBusinessSchema()),
           }}
         />
       </head>

@@ -1,69 +1,123 @@
-# ─── Security Headers ───────────────────────────────────────
-<IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-Frame-Options "DENY"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
-  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-  Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-  Header set X-XSS-Protection "1; mode=block"
+# --------------------------------------------------------------
+#  TENSAIFORGE � Apache .htaccess
+#  Next.js static export (output: "export", trailingSlash: true)
+#  Hostinger shared hosting � Apache 2.4
+# --------------------------------------------------------------
+
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+
+# --- HTTPS + www -> non-www Redirect -----------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Strip www (canonical = non-www)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # 3. Serve real files & directories directly.
+  #    CRITICAL: robots.txt, sitemap.xml, _next/ assets, /public/ images
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 4. Resolve Next.js trailingSlash pages: /blog/slug/ -> /blog/slug/index.html
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
 </IfModule>
 
-# ─── GZIP Compression ──────────────────────────────────────
+# --- Custom Error Pages -------------------------------------
+ErrorDocument 404 /404/index.html
+
+# --- MIME Types ---------------------------------------------
+<IfModule mod_mime.c>
+  AddType text/plain              .txt
+  AddType application/xml         .xml
+  AddType application/json        .json
+  AddType application/manifest+json .webmanifest
+  AddType image/webp              .webp
+  AddType image/avif              .avif
+  AddType font/woff2              .woff2
+  AddType font/woff               .woff
+</IfModule>
+
+# --- Security Headers ---------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options      "nosniff"
+  Header always set X-Frame-Options             "SAMEORIGIN"
+  Header always set Referrer-Policy             "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy          "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+  Header always set Strict-Transport-Security   "max-age=63072000; includeSubDomains; preload"
+  Header always unset X-Powered-By
+  Header always unset Server
+</IfModule>
+
+# --- GZIP / Deflate Compression ----------------------------
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css
-  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE text/javascript application/javascript
   AddOutputFilterByType DEFLATE application/json application/ld+json
   AddOutputFilterByType DEFLATE application/xml text/xml
   AddOutputFilterByType DEFLATE image/svg+xml
   AddOutputFilterByType DEFLATE font/woff2 font/woff font/ttf
 </IfModule>
 
-# ─── Browser Caching ───────────────────────────────────────
+# --- Browser Caching ---------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # HTML — short cache so updates propagate quickly
-  ExpiresByType text/html "access plus 1 hour"
+  # HTML
+  ExpiresByType text/html                  "access plus 1 hour"
 
-  # CSS & JS — hashed filenames, cache aggressively
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-  ExpiresByType text/javascript "access plus 1 year"
+  # Metadata: short cache so crawlers pick up updates promptly
+  ExpiresByType text/plain                 "access plus 1 hour"
+  ExpiresByType application/xml            "access plus 1 hour"
+  ExpiresByType application/json           "access plus 1 hour"
+  ExpiresByType application/manifest+json  "access plus 1 day"
 
-  # Images — cache aggressively
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/avif "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/x-icon "access plus 1 year"
+  # CSS & JS: hashed filenames, cache aggressively
+  ExpiresByType text/css                   "access plus 1 year"
+  ExpiresByType application/javascript     "access plus 1 year"
+  ExpiresByType text/javascript            "access plus 1 year"
 
-  # Fonts — cache aggressively
-  ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresByType font/woff "access plus 1 year"
-  ExpiresByType font/ttf "access plus 1 year"
+  # Images
+  ExpiresByType image/jpeg                 "access plus 1 year"
+  ExpiresByType image/png                  "access plus 1 year"
+  ExpiresByType image/gif                  "access plus 1 year"
+  ExpiresByType image/webp                 "access plus 1 year"
+  ExpiresByType image/avif                 "access plus 1 year"
+  ExpiresByType image/svg+xml              "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 year"
 
-  # JSON / XML
-  ExpiresByType application/json "access plus 1 hour"
-  ExpiresByType application/ld+json "access plus 1 day"
-  ExpiresByType application/xml "access plus 1 hour"
-
-  # Manifest & service worker
-  ExpiresByType application/manifest+json "access plus 1 day"
+  # Fonts
+  ExpiresByType font/woff2                 "access plus 1 year"
+  ExpiresByType font/woff                  "access plus 1 year"
+  ExpiresByType font/ttf                   "access plus 1 year"
 </IfModule>
 
-# ─── Cache-Control for hashed assets ──────────────────────
+# --- Cache-Control headers ---------------------------------
 <IfModule mod_headers.c>
-  <FilesMatch "\.(js|css|woff2|woff|ttf|svg|png|jpg|jpeg|webp|avif|ico|gif)$">
+  # Content-hashed assets: immutable forever
+  <FilesMatch "\.(js|css|woff2|woff|ttf|png|jpg|jpeg|webp|avif|svg|ico|gif)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+
+  # HTML pages: short cache with revalidation
   <FilesMatch "\.html$">
     Header set Cache-Control "public, max-age=3600, must-revalidate"
   </FilesMatch>
+
+  # robots.txt, sitemap.xml: short cache so crawlers see updates fast
+  <FilesMatch "\.(txt|xml|webmanifest)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
 </IfModule>
 
-# ─── ETag (disable for static — caching handles it) ──────
+# --- ETag (disable: Cache-Control handles freshness) -------
 <IfModule mod_headers.c>
   Header unset ETag
 </IfModule>

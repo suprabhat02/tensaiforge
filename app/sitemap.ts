@@ -6,7 +6,7 @@ import { BLOG_POSTS } from "@/lib/blog-posts";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteLastModified = new Date("2026-05-27");
+  const siteLastModified = new Date("2026-05-28");
 
   return [
     {
