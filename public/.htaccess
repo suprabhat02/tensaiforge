@@ -1,7 +1,7 @@
 # --------------------------------------------------------------
-#  TENSAIFORGE — Apache .htaccess
+#  TENSAIFORGE ï¿½ Apache .htaccess
 #  Next.js static export (output: "export", trailingSlash: true)
-#  Hostinger shared hosting — Apache 2.4
+#  Hostinger shared hosting ï¿½ Apache 2.4
 # --------------------------------------------------------------
 
 Options -Indexes -MultiViews
@@ -10,9 +10,15 @@ DirectoryIndex index.html
 # --- HTTPS + www -> non-www Redirect -----------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
 
   # 1. Force HTTPS
-  RewriteCond %{HTTPS} !=on
+  # Hostinger terminates SSL at their edge proxy â€” Apache always sees HTTPS=off.
+  # We must check X-Forwarded-Proto (set by Hostinger's proxy) instead.
+  # Using both conditions with AND logic: only redirect if BOTH say non-HTTPS,
+  # preventing infinite redirect loops on Hostinger/Cloudflare edge setups.
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # 2. Strip www (canonical = non-www)
