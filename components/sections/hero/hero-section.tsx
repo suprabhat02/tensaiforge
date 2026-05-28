@@ -155,7 +155,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}
         transition={{
@@ -195,7 +195,7 @@ export function HeroSection() {
             />
           </svg>
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
