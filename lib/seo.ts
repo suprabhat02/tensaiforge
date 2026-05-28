@@ -22,6 +22,7 @@ export const BASE_METADATA: Metadata = {
     "cloud backend solutions",
     "automation engineering",
     "AI startup development",
+    "AI-powered software engineering",
     "TENSAIFORGE",
   ],
   // SEO-FIX: Explicit canonical prevents duplicate-content split between

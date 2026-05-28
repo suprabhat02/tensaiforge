@@ -115,6 +115,10 @@ const config: Config = {
         aurora: {
           "from, to": { backgroundPosition: "50% 50%, 350% 50%" },
         },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
@@ -124,6 +128,7 @@ const config: Config = {
         scroll: "scroll var(--animation-duration, 40s) linear infinite",
         shimmer: "shimmer 2s linear infinite",
         aurora: "aurora 60s linear infinite alternate",
+        "gradient-shift": "gradient-shift 8s ease infinite",
       },
     },
   },
