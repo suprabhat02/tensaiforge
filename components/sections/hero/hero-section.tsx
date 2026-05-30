@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "@/lib/animated-icons";
+import { Zap, ArrowRight, Sparkles } from "@/lib/animated-icons";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import { ParallaxHeroImages } from "@/components/ui/parallax-hero-images";
 import { FADE_UP, FADE_DOWN, EASE_OUT_EXPO } from "@/lib/animations";
@@ -20,7 +20,7 @@ export function HeroSection() {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-background pt-20"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-background"
     >
       {/* Dotted glow background */}
       <DottedGlowBackground
@@ -80,172 +80,20 @@ export function HeroSection() {
           </span>
         </motion.div>
 
-        {/* H1 — Video-filled text */}
-        <motion.div
+        {/* H1 */}
+        {/* SEO-FIX: Added id="hero-heading" so aria-labelledby on the <section>
+             creates a machine-readable section identity for crawlers and AT. */}
+        <motion.h1
+          id="hero-heading"
           initial="hidden"
           animate="visible"
           variants={FADE_UP}
           transition={{ ...EASE_OUT_EXPO, delay: 0.4 }}
-          className="relative mt-8 w-full overflow-hidden rounded-lg"
+          className="mt-8 font-display text-5xl font-extrabold leading-[0.92] tracking-tight sm:text-7xl lg:text-[5.5rem]"
         >
-          {/* Animated gradient fallback (visible while video loads) */}
-          <div
-            className="absolute inset-0 animate-gradient-shift bg-[length:200%_200%] bg-gradient-to-br from-forge-700 via-forge-500 to-orange-600"
-            aria-hidden="true"
-          />
-          {/* Video background — brightness boosted so letters are vivid against dark page */}
-          <video
-            className="absolute inset-0 h-full w-full object-cover brightness-125 saturate-[1.15]"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            aria-hidden="true"
-          >
-            <source src="/forge-reel.webm" type="video/webm" />
-            <source src="/forge-reel.mp4" type="video/mp4" />
-          </video>
-
-          {/* SVG mask — viewBox locks the coordinate system so text never clips */}
-          <svg
-            className="relative z-10 block w-full"
-            viewBox="0 0 1000 520"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <defs>
-              <filter
-                id="hero-text-glow"
-                x="-20%"
-                y="-20%"
-                width="140%"
-                height="140%"
-              >
-                <feGaussianBlur
-                  in="SourceGraphic"
-                  stdDeviation="4"
-                  result="blur"
-                />
-                <feColorMatrix
-                  in="blur"
-                  type="matrix"
-                  values="1 0 0 0 0.97  0 1 0 0 0.02  0 0 1 0 0.02  0 0 0 18 -7"
-                  result="glow"
-                />
-                <feMerge>
-                  <feMergeNode in="glow" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-              <mask id="hero-text-mask">
-                <rect width="100%" height="100%" fill="white" />
-                {/* White halo around letters for readability */}
-                <text
-                  x="500"
-                  y="195"
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.5)"
-                  strokeWidth="10"
-                  fontSize="170"
-                  fontWeight="900"
-                  fontFamily="var(--font-display), system-ui, sans-serif"
-                  letterSpacing="-5"
-                >
-                  ENGINEERING
-                </text>
-                <text
-                  x="500"
-                  y="390"
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.5)"
-                  strokeWidth="10"
-                  fontSize="170"
-                  fontWeight="900"
-                  fontFamily="var(--font-display), system-ui, sans-serif"
-                  letterSpacing="-5"
-                >
-                  INTELLIGENCE
-                </text>
-                {/* Core letter cutout */}
-                <text
-                  x="500"
-                  y="195"
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fill="black"
-                  fontSize="170"
-                  fontWeight="900"
-                  fontFamily="var(--font-display), system-ui, sans-serif"
-                  letterSpacing="-5"
-                >
-                  ENGINEERING
-                </text>
-                <text
-                  x="500"
-                  y="390"
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fill="black"
-                  fontSize="170"
-                  fontWeight="900"
-                  fontFamily="var(--font-display), system-ui, sans-serif"
-                  letterSpacing="-5"
-                >
-                  INTELLIGENCE
-                </text>
-              </mask>
-            </defs>
-            <rect
-              width="100%"
-              height="100%"
-              mask="url(#hero-text-mask)"
-              style={{ fill: "hsl(var(--background))" }}
-            />
-            {/* Glow outline on top */}
-            <text
-              x="500"
-              y="195"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fill="none"
-              stroke="#ef444433"
-              strokeWidth="1.5"
-              filter="url(#hero-text-glow)"
-              fontSize="170"
-              fontWeight="900"
-              fontFamily="var(--font-display), system-ui, sans-serif"
-              letterSpacing="-5"
-            >
-              ENGINEERING
-            </text>
-            <text
-              x="500"
-              y="390"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fill="none"
-              stroke="#ef444433"
-              strokeWidth="1.5"
-              filter="url(#hero-text-glow)"
-              fontSize="170"
-              fontWeight="900"
-              fontFamily="var(--font-display), system-ui, sans-serif"
-              letterSpacing="-5"
-            >
-              INTELLIGENCE
-            </text>
-          </svg>
-        </motion.div>
-        {/* Accessible h1 — sr-only for SEO + screen readers */}
-        <h1 id="hero-heading" className="sr-only">
-          Engineering Intelligence — AI-Powered Software Engineering
-        </h1>
+          <span className="block">Engineering</span>
+          <span className="text-gradient-forge mt-1 block">Intelligence</span>
+        </motion.h1>
 
         {/* Subtext */}
         <motion.p
