@@ -45,20 +45,18 @@ const TIMELINE_DATA = [
             </li>
           ))}
         </ul>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="relative overflow-hidden rounded-lg">
           <Image
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=60"
-            alt="Developer using laptop during AI-powered requirements discovery and stakeholder research"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
+            src="/process/software-discovery.jpg"
+            alt="Startup founder studying a research wall covered with wireframes, user personas, and market analysis during product discovery"
+            width={800}
+            height={450}
+            className="h-44 w-full rounded-lg object-cover md:h-64 lg:h-72"
+            loading="lazy"
           />
-          <Image
-            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=60"
-            alt="AI robot illustrating automated market research and competitive intelligence analysis"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
+          <div
+            className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-forge-500/20 via-transparent to-forge-900/30"
+            aria-hidden="true"
           />
         </div>
       </div>
@@ -102,20 +100,18 @@ const TIMELINE_DATA = [
             </li>
           ))}
         </ul>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="relative overflow-hidden rounded-lg">
           <Image
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=60"
-            alt="Server network cables representing microservices and scalable cloud infrastructure architecture"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
+            src="/process/software-architecture.jpg"
+            alt="Multi-monitor workstation with design tools open, planning system architecture and UI components for a scalable product"
+            width={800}
+            height={450}
+            className="h-44 w-full rounded-lg object-cover md:h-64 lg:h-72"
+            loading="lazy"
           />
-          <Image
-            src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=60"
-            alt="Code editor showing AI-optimized database schema and infrastructure-as-code blueprints"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
+          <div
+            className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-forge-500/20 via-transparent to-forge-900/30"
+            aria-hidden="true"
           />
         </div>
       </div>
@@ -159,20 +155,18 @@ const TIMELINE_DATA = [
             </li>
           ))}
         </ul>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="relative overflow-hidden rounded-lg">
           <Image
-            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=60"
-            alt="AI pair programming assistant generating code to accelerate software development"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
+            src="/process/software-build-and-ship.jpg"
+            alt="Development team collaborating with laptops during an agile sprint, building and shipping production code"
+            width={800}
+            height={450}
+            className="h-44 w-full rounded-lg object-cover md:h-64 lg:h-72"
+            loading="lazy"
           />
-          <Image
-            src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=60"
-            alt="Terminal showing automated CI/CD pipeline with zero-downtime deployment and 95% test coverage"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
+          <div
+            className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-forge-500/20 via-transparent to-forge-900/30"
+            aria-hidden="true"
           />
         </div>
       </div>
@@ -216,20 +210,18 @@ const TIMELINE_DATA = [
             </li>
           ))}
         </ul>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="relative overflow-hidden rounded-lg">
           <Image
-            src="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&q=60"
-            alt="Real-time AI monitoring dashboard detecting system anomalies and performance metrics"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
+            src="/process/software-scale-and-evolve.jpg"
+            alt="Professional color grading and monitoring dashboard representing continuous system optimization and performance evolution"
+            width={800}
+            height={450}
+            className="h-44 w-full rounded-lg object-cover md:h-64 lg:h-72"
+            loading="lazy"
           />
-          <Image
-            src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&q=60"
-            alt="Application component architecture visualising predictive auto-scaling and continuous feature evolution"
-            width={500}
-            height={500}
-            className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(249,4,4,0.1)] md:h-44 lg:h-60"
+          <div
+            className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-forge-500/20 via-transparent to-forge-900/30"
+            aria-hidden="true"
           />
         </div>
       </div>
